@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Tiro+Bangla:ital@0;1&family=Noto+Sans+Devanagari:wght@400;600;700&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
   <title>দোকানের খাতা - ডিজিটাল বাকি খাতা ও বিলিং</title>
   <style>
     :root {
@@ -1067,11 +1067,11 @@
       --text-muted: #5f6b7a;
       --border: #d5d2c8;
       --radius: 8px;
-      --serif: "Tiro Bangla", "Noto Serif Bengali", serif;
+      --serif: "Tiro Bangla", "Tiro Devanagari Hindi", "Noto Serif Bengali", serif;
     }
 
     body {
-      font-family: "Hind Siliguri", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Bengali", "SolaimanLipi", "Kalpurush", sans-serif;
+      font-family: "Hind Siliguri", "Noto Sans Devanagari", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Bengali", "SolaimanLipi", "Kalpurush", sans-serif;
       background: #dfe3e8;
       color: var(--ink);
     }
@@ -1270,7 +1270,7 @@
       border: 1px solid #cdc7b6;
       border-radius: 3px;
       padding: 0 18px 8px;
-      font-family: "Hind Siliguri", "Noto Sans Bengali", sans-serif;
+      font-family: "Hind Siliguri", "Noto Sans Devanagari", "Noto Sans Bengali", sans-serif;
       font-size: 13px;
       line-height: 1.45;
       margin-bottom: 12px;
@@ -1392,7 +1392,7 @@
       opacity: 0.88;
       animation: stampIn 0.32s ease-out;
     }
-    .memo-stamp small { display: block; font-family: "Hind Siliguri", sans-serif; font-size: 11px; letter-spacing: 0; font-weight: 600; }
+    .memo-stamp small { display: block; font-family: "Hind Siliguri", "Noto Sans Devanagari", sans-serif; font-size: 11px; letter-spacing: 0; font-weight: 600; }
     .memo-stamp.paid { color: #1f6b4a; }
     .memo-stamp.due { color: #b3261e; }
     .memo-stamp.advance { color: #2c3f8f; }
@@ -1488,7 +1488,7 @@
       padding: 36px 40px 28px;
       background: #ffffff;
       color: #1b2a41;
-      font-family: "Hind Siliguri", "Noto Sans Bengali", sans-serif;
+      font-family: "Hind Siliguri", "Noto Sans Devanagari", "Noto Sans Bengali", sans-serif;
       font-size: 13px;
       line-height: 1.4;
       display: flex;
@@ -1513,13 +1513,36 @@
     .rpt-box .k { display: inline-block; min-width: 120px; color: #5f6b7a; }
     .rpt-warn { background: #fbecea; color: #b3261e; border: 1px solid #f5b5b0; border-radius: 4px; padding: 6px 10px; margin-bottom: 10px; font-size: 12.5px; font-weight: 600; }
     .rpt-sec-title { font-family: var(--serif); font-size: 15px; margin: 8px 0 4px; height: 22px; line-height: 22px; }
-    .rpt-sec-title small { font-family: "Hind Siliguri", sans-serif; font-size: 11px; color: #5f6b7a; }
+    .rpt-sec-title small { font-family: "Hind Siliguri", "Noto Sans Devanagari", sans-serif; font-size: 11px; color: #5f6b7a; }
     .rpt-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 12px; }
     .rpt-table th { height: 26px; padding: 0 6px; background: #f2f0ea; border-top: 2px solid #1b2a41; border-bottom: 1px solid #1b2a41; text-align: left; font-weight: 600; white-space: nowrap; overflow: hidden; }
     .rpt-table td { height: 26px; padding: 0 6px; border-bottom: 1px dotted #b8b3a4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .rpt-table .r { text-align: right; }
     .rpt-red { color: #b3261e; font-weight: 600; }
     .rpt-green { color: #1f6b4a; font-weight: 600; }
+
+    .lang-select {
+      flex: 0 0 auto;
+      max-width: 112px;
+      min-height: 36px;
+      padding: 4px 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #fff1cf;
+      background: rgba(0,0,0,0.18);
+      border: 1px solid rgba(227,179,65,0.55);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .lang-select option { color: #1b2a41; background: #ffffff; }
+    .lang-chooser-btn {
+      display: flex; align-items: center; justify-content: space-between;
+      width: 100%; padding: 12px 14px; margin-bottom: 8px;
+      border: 1.5px solid var(--border); border-radius: 8px; background: #fff;
+      font-size: 17px; font-weight: 600; cursor: pointer; color: var(--ink);
+    }
+    .lang-chooser-btn:hover, .lang-chooser-btn:active { background: rgba(227,179,65,0.18); border-color: var(--ink); }
+    .lang-chooser-btn small { font-size: 12px; font-weight: 400; color: var(--text-muted); }
   </style>
 </head>
 <body>
@@ -1537,6 +1560,7 @@
           <span class="shop-switch-arrow">▼</span>
         </button>
 
+        <select id="lang-select" class="lang-select" data-no-tr title="Language / ভাষা / भाषा" aria-label="Language" onchange="setLang(this.value)"></select>
         <div id="header-nav-actions" class="header-actions"></div>
       </div>
     </header>
@@ -1569,6 +1593,165 @@
 
     const STORAGE_KEY = 'dokan_khata_data';
     const SESSION_DURATION_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
+
+    // ==========================================
+    // Language support (i18n)
+    // The app text is written in Bengali. Other languages are applied as a
+    // translation layer on top: a phrase dictionary per language, applied to
+    // everything shown on screen, alerts, CSV files, PDFs and WhatsApp texts.
+    // To add a new language: add it to LANGS and add a pack in I18N_PACKS.
+    // ==========================================
+    const LANG_KEY = 'dokan_khata_lang';
+    const LANGS = {
+      bn: { name: 'বাংলা',   en: 'Bengali', locale: 'bn-IN', title: 'দোকানের খাতা - ডিজিটাল বাকি খাতা ও বিলিং' },
+      en: { name: 'English', en: 'English', locale: 'en-IN', title: 'Shop Ledger - Digital Credit Ledger & Billing' },
+      hi: { name: 'हिन्दी',   en: 'Hindi',   locale: 'hi-IN', title: 'दुकान का खाता - डिजिटल बाकी खाता व बिलिंग' }
+    };
+    const I18N_PACKS = {"en": {"অক্ষর": "characters", "অক্ষর, পাসওয়ার্ড থেকে আলাদা": "characters, different from the password", "অক্ষরের হতে হবে!": "characters long!", "অক্ষরের হলে সেটাই আবার দিতে পারেন": "characters or more, you can reuse the same one", "অগ্রিম জমা": "Advance deposit", "অগ্রিম জমা আছে (গ্রাহক পাবে)": "Advance deposited (customer will get credit)", "অতিরিক্ত জমা": "Extra deposit", "অনুগ্রহ করে নতুন পাসওয়ার্ড অথবা নতুন পুনরুদ্ধার শব্দ লিখুন": "Please enter a new password or a new recovery word", "অনুগ্রহ করে প্রতিটি আইটেমের নাম, সঠিক পরিমাণ ও দর পূরণ করুন!": "Please fill in each item's name, a valid quantity and rate!", "অন্তত একটি আইটেম যোগ করুন!": "Add at least one item!", "অন্তত একটি দোকান থাকা আবশ্যক!": "At least one shop is required!", "অন্যের সাথে শেয়ার করা ফোন/কম্পিউটারে এটি বন্ধ রাখুন — তখন প্রতিবার খোলার সময় পাসওয়ার্ড লাগবে": "Keep this off on a shared phone/computer — then the password will be needed every time you open it", "অবস্থা": "Status", "অ্যান্টাসিড / গ্যাস ট্যাবলেট": "Antacid / Gas tablet", "আইটেম ও দর দিলে এখানে হিসাব দেখা যাবে": "Enter items and rates to see the calculation here", "আইটেম যোগ করুন": "Add item", "আইটেম সম্পাদনা": "Edit item", "আইটেমভিত্তিক বিল": "Itemized bill", "আগে একজন গ্রাহক যোগ করুন": "Add a customer first", "আগে কোনো পুনরুদ্ধার শব্দ সেট করা ছিল না": "No recovery word was set earlier", "আগে থেকে ব্যাকআপ ফাইল আছে?": "Already have a backup file?", "আগে যেটা সেট করেছিলেন": "The one you set earlier", "আগে সেট করা পুনরুদ্ধার শব্দটি দিন এবং নতুন পাসওয়ার্ড বানান": "Enter the recovery word you set earlier and create a new password", "আগের পাসওয়ার্ড": "Previous password", "আগের পুনরুদ্ধার শব্দ": "Previous recovery word", "আগের পুনরুদ্ধার শব্দ লিখুন!": "Enter the previous recovery word!", "আগেরটি": "The previous one", "আজ": "Today", "আজ দোকান এখনও খোলা হয়নি": "The shop has not been opened yet today", "আজ দোকানের খরচ:": "Shop expenses today:", "আজ নগদ জমা": "Cash received today", "আজ নগদ জমা পেলেন:": "Cash received today:", "আজ নতুন বাকি": "New credit today", "আজ নতুন বাকি দেওয়া হয়েছে:": "New credit given today:", "আজকের খরচ": "Today's expenses", "আজকের দিনের কেনাবেচা ও হিসাব শুরু করার জন্য সকালের প্রারম্ভিক ক্যাশ লিখুন": "Enter the opening cash of the morning to start today's trading and accounts", "আজকের দিনের খতিয়ান সফলভাবে সংরক্ষিত হয়েছে!": "Today's day-book was saved successfully!", "আটা": "Atta (flour)", "আনা": "Ana", "আপডেটেড": "updated", "আপনার কাছে ব্যাকআপ ফাইল থাকলে সেখান থেকে রিস্টোর করুন": "If you have a backup file, restore from it", "আপনার ডেটা মোছা হয়নি": "Your data has not been deleted", "আপনার বাকি": "Due from the customer", "আপনার সব ডেটা": "All your data is protected using", "আপনার সব হিসাব এই পাসওয়ার্ড দিয়ে এনক্রিপ্ট (AES-256) হয়ে ফোনে থাকবে": "All your accounts will stay on the phone, encrypted (AES-256) with this password", "আপনার সমস্ত তথ্য অক্ষুণ্ণ থাকবে": "All your data will remain intact", "আপনার সমস্ত দোকান:": "All your shops:", "আপনার সমস্ত দোকানের সমস্ত হিসাবের ব্যাকআপ ডাউনলোড করে নিরাপদে রাখুন অথবা নতুন ফোনে রিস্টোর করুন": "Download a backup of all accounts of all your shops and keep it safe, or restore it on a new phone", "আপনার সহযোগিতার জন্য ধন্যবাদ": "Thank you for your cooperation", "আপনি কি নিশ্চিত আজকের দিনের হিসাব ক্লোজ ও সংরক্ষণ করতে চান?": "Are you sure you want to close and save today's accounts?", "আপনি কি নিশ্চিত এই খরচের এন্ট্রিটি মুছে ফেলতে চান?": "Are you sure you want to delete this expense entry?", "আপনি কি নিশ্চিত এই ব্যাকআপ ফাইলটি রিস্টোর করতে চান? বর্তমান সমস্ত তথ্য প্রতিস্থাপিত হবে": "Are you sure you want to restore this backup file? All current data will be replaced", "আপনি কি নিশ্চিত এই লেনদেনটি মুছে ফেলতে চান?": "Are you sure you want to delete this transaction?", "আপনি কি নিশ্চিত?": "Are you sure?", "আবার আসবেন!": "Please visit again!", "আবার চেষ্টা করুন": "Try again", "আমাদের উপর আস্থা রাখার জন্য ধন্যবাদ": "Thank you for trusting us", "আমাদের এখানে খাওয়ার জন্য ধন্যবাদ": "Thank you for dining with us", "আরও": "more", "আরও আইটেম যোগ করুন": "Add more items", "উপরের ফর্ম থেকে আপনার প্রথম গ্রাহক যোগ করুন": "Add your first customer from the form above", "এ আপনার মোট বাকি": "your total due at", "এ চাপ দিলে খতিয়ান তৈরি হবে": "— tap it to create the day-book", "এই গ্রাহককে মুছে দিলে তার সম্পর্কিত সমস্ত লেনদেনের হিসাব চিরতরে মুছে যাবে": "If you delete this customer, all related transaction records will be deleted permanently", "এই গ্রাহকের কোনো বিল এখনও তৈরি হয়নি": "No bill has been created for this customer yet", "এই গ্রাহকের খতিয়ান ডাউনলোড (CSV)": "Download this customer's ledger (CSV)", "এই গ্রাহকের তথ্য মুছে ফেলা হয়েছে বা বিদ্যমান নেই": "This customer's data was deleted or does not exist", "এই ডিভাইসে ৩০ দিন লগইন মনে রাখুন": "Remember login on this device for 30 days", "এই নামে আইটেম আগে থেকেই আছে": "An item with this name already exists", "এই নামে আরেকটি আইটেম আছে!": "Another item with this name exists!", "এই নামে কোনো আইটেম নেই": "No item with this name", "এই নামে কোনো গ্রাহক পাওয়া যায়নি": "No customer found with this name", "এই ফাইলটি এনক্রিপ্টেড নয়, তাই সাবধানে রাখুন": "this file is not encrypted, so keep it carefully", "এই বাকি": "When will this due", "এই বিলে বাকি": "Due on this bill", "এই ব্রাউজার বা লিংকে সুরক্ষিত এনক্রিপশন (Web Crypto) চালু নেই, তাই নিরাপত্তার স্বার্থে খাতা খোলা হয়নি": "Secure encryption (Web Crypto) is not available in this browser or link, so for safety the ledger was not opened", "এই ব্রাউজারে এনক্রিপশন সাপোর্ট নেই, তাই রিস্টোর করা যাচ্ছে না": "This browser does not support encryption, so restore is not possible", "একক": "Unit", "একটি নতুন পুনরুদ্ধার শব্দ ও পাসওয়ার্ড সেট করুন": "Set a new recovery word and password", "একবার আপগ্রেড করে নিলে পুরনো (এনক্রিপ্ট না করা) কপি মুছে যাবে": "Once you upgrade, the old (unencrypted) copy will be deleted", "এক্সেল রিপোর্ট ডাউনলোড (CSV)": "Excel report download (CSV)", "এখন থেকে এই ব্যাকআপের পাসওয়ার্ডই আপনার খাতার পাসওয়ার্ড": "From now on, this backup's password is your ledger's password", "এখন থেকে খাতা এনক্রিপ্টেড থাকবে": "From now on the ledger will stay encrypted", "এখন থেকে সব ডেটা": "From now on, all data will be encrypted using", "এখন নগদ জমা দিল কি? (ঐচ্ছিক)": "Did the customer pay cash now? (optional)", "এখনও কোনো খরচ এন্ট্রি করা হয়নি": "No expense entry has been added yet", "এখনও কোনো গ্রাহক যোগ করা হয়নি": "No customer has been added yet", "এখনও কোনো দিনের ক্লোজিং খতিয়ান নেই": "There is no day-closing record yet", "এখনও কোনো বাকি বা জমার হিসাব যোগ করা হয়নি": "No credit or deposit record has been added yet", "এখনও কোনো বিল তৈরি হয়নি": "No bill has been created yet", "এখনকার পাসওয়ার্ড": "Current password", "এগ রোল": "Egg roll", "এটা ক্যাশবাক্সে নেই": "This is not in the cash drawer", "এটি পুরনো (এনক্রিপ্ট না করা) ফরম্যাটের ব্যাকআপ": "This is an old (unencrypted) format backup", "এতদিন আপনার খাতার ডেটা ফোনে এনক্রিপ্ট ছাড়া সংরক্ষিত ছিল": "Until now, your ledger data was stored on the phone without encryption", "এনক্রিপশন চালু করা যাচ্ছে না": "Cannot enable encryption", "এনক্রিপ্ট করা হচ্ছে": "Encrypting", "এনক্রিপ্ট করে চালু করুন": "Encrypt and start", "এবং": "and", "এর পরিশোধের তারিখ পেরিয়ে গেছে": "worth of payment is past its due date", "এর মধ্যে": "of this", "এর মধ্যে মেয়াদ পেরিয়েছে": "of this, overdue", "এর হিসাবের স্টেটমেন্ট (PDF) পাঠানো হল": "statement of accounts (PDF) has been sent", "ঐচ্ছিক, কমপক্ষে": "optional, at least", "ওআরএস (ORS)": "ORS", "ওষুধের ক্যাশ মেমো": "Medicine cash memo", "ওষুধের দোকান ও ফার্মেসি": "Medicine shop & pharmacy", "ওষুধের নাম": "Medicine name", "কত": "how much", "কফি": "Coffee", "কবে দেবে?": "be paid?", "কম স্টক": "Low stock", "কম স্টক সতর্কতা (এর নিচে নামলে জানাবে)": "Low stock alert (notify when below this)", "কম স্টক সতর্কতা সীমা": "Low stock alert limit", "কমপক্ষে": "at least", "করুন": "", "কর্মচারীর বেতন": "Employee salary", "কর্মচারীর বেতন/মজুরি": "Employee salary/wages", "কাজু বরফি": "Kaju barfi", "কানের দুল": "Earrings", "কাপ": "Cup", "কার্ড": "Card", "কার্ড (Card)": "Card", "কার্ড:": "Card:", "কার্ডে এসেছে:": "Received via card:", "কার্ডে পেলেন (ক্যাশবাক্সের বাইরে):": "Received via card (outside the cash drawer):", "কাশির সিরাপ": "Cough syrup", "কীভাবে টাকা পেলেন? (নগদ / UPI / কার্ড)": "How did you receive the money? (Cash / UPI / Card)", "কেজি": "Kg", "কেনাকাটার ইতিহাস": "Purchase history", "কেনাকাটার জন্য ধন্যবাদ": "Thank you for shopping with us", "কোন তারিখ থেকে": "From which date", "কোন তারিখ পর্যন্ত": "Up to which date", "কোনো নম্বর দেওয়া নেই": "No number provided", "ক্যাশ ক্লোজিং:": "Cash closing:", "ক্যাশ মেমো": "Cash memo", "ক্যাশ মেমো / বিল": "Cash memo / Bill", "ক্যাশবাক্সে টাকা": "Money in the cash drawer", "ক্যাশবাক্সে প্রত্যাশিত ক্যাশ:": "Expected cash in the drawer:", "ক্রমিক": "Sl. no.", "ক্রয়": "Purchase", "ক্রয়দর (₹)": "Purchase rate (₹)", "ক্রয়দর (₹/একক)": "Purchase rate (₹/unit)", "খরচ সংরক্ষণ করুন": "Save expense", "খরচের তালিকা": "Expense list", "খরচের ধরন": "Expense type", "খরচের ধরন অনুযায়ী": "By expense type", "খাতা তৈরি করুন": "Create ledger", "খাতা লক করা আছে": "The ledger is locked", "খাতায় প্রবেশ করুন": "Enter the ledger", "খাবার, হোটেল ও রেস্তোরাঁ": "Food, hotel & restaurant", "খাবারের নাম": "Food name", "খোলা হচ্ছে": "Opening", "গয়নার ক্যাশ মেমো": "Jewellery cash memo", "গয়নার বিবরণ": "Jewellery details", "গামছা": "Gamchha", "গুদাম": "Stock", "গুদাম থেকে মুছে ফেলবেন?": "Delete from the warehouse?", "গুদাম হিসাব মিলিয়ে নিন": "match the warehouse records", "গুদামে আইটেম খুঁজুন...": "Search items in the warehouse...", "গুদামে এখনও কোনো আইটেম নেই": "There are no items in the warehouse yet", "গুদামের স্টক তালিকা": "Warehouse stock list", "গ্রাম": "Gram", "গ্রাহক": "Customer", "গ্রাহক আংশিক নগদ দিলে বাকি স্বয়ংক্রিয়ভাবে বাদ যাবে": "If the customer pays part in cash, the due is deducted automatically", "গ্রাহক এবং তার সমস্ত লেনদেনের তথ্য মুছে যাবে!": "and all their transaction data will be deleted!", "গ্রাহক তালিকা (সর্বোচ্চ বাকি আগে)": "Customer list (highest due first)", "গ্রাহক পাওয়া যায়নি!": "Customer not found!", "গ্রাহক মুছে ফেলুন": "Delete customer", "গ্রাহক যোগ করুন": "Add customer", "গ্রাহক সম্পূর্ণ টাকা নগদ পরিশোধ করেছেন": "The customer has paid the full amount in cash", "গ্রাহক স্টেটমেন্ট": "Customer statement", "গ্রাহকের নতুন মোবাইল নম্বর লিখুন:": "Enter the customer's new mobile number:", "গ্রাহকের নাম": "Customer name", "গ্রাহকের নাম বা মোবাইল নম্বর খুঁজুন...": "Search by customer name or mobile number...", "গ্রাহকের নাম:": "Customer name:", "গ্রাহকের পাতা থেকেও এই স্টেটমেন্ট বানানো যায়": "You can also create this statement from the customer's page", "গ্রাহকের স্টেটমেন্ট (PDF)": "Customer statement (PDF)", "গ্রাহকের স্বাক্ষর": "Customer's signature", "চমচম": "Chamcham", "চলতি মাসের খরচ": "This month's expenses", "চা পাতা": "Tea leaves", "চা-নাস্তা": "Tea & snacks", "চা-নাস্তা ও খাবার": "Tea, snacks & food", "চাউমিন": "Chowmein", "চালু ছিল:": "Was open:", "চিকেন বিরিয়ানি": "Chicken biryani", "চিনি": "Sugar", "জন": "people", "জন গ্রাহক": "customers", "জন গ্রাহকের কাছে মোট পাওনা": "customers owe you in total", "জনপ্রিয় আইটেম": "Popular items", "জনপ্রিয় আইটেম সাজেশন": "Popular item suggestions", "জমা": "Deposit", "জমা (₹)": "Deposit (₹)", "জমা নিচ্ছেন (−)": "Taking deposit (−)", "জমা পেয়েছি": "Received", "জমা পেলাম": "Received deposit", "জমা সাইডে": "On the deposit side", "জমা:": "Deposit:", "জিলিপি": "Jalebi", "জোড়া": "Pair", "টাকা": "Rupees", "টাকার পরিমাণ (₹)": "Amount (₹)", "টাটকা মিষ্টি পছন্দ হলে আবার আসুন": "Come again if you liked the fresh sweets", "টি আইটেমের স্টক কম:": " items are low on stock:", "টি দোকান": " shops", "টি বিল": " bills", "টি-শার্ট": "T-shirt", "ঠিক আছে": "OK", "ঠিকানা (বিলে থাকবে)": "Address (will appear on the bill)", "ডজন": "Dozen", "ডাউনলোড": "Download", "ডাউনলোড হয়েছে": "Downloaded", "ডাক্তারের পরামর্শ মেনে ওষুধ সেবন করুন": "Take medicines as advised by your doctor", "ডিজিটাল খাতা ও বিলিং শুরু করার জন্য দোকানের নাম, ধরন ও পাসওয়ার্ড দিন": "To start the digital ledger and billing, enter the shop name, type and a password", "ডিজিটাল বাকি খাতা": "Digital credit ledger", "ডিম টোস্ট": "Egg toast", "ডেটা এনক্রিপ্টেড অবস্থায় আছে": "The data is in encrypted state", "ডেটা পড়া যাচ্ছে না": "Cannot read data", "তথ্য আপডেট করুন": "Update details", "তথ্য পড়তে ব্যর্থ হয়েছে:": "Failed to read data:", "তথ্য সংরক্ষণ করতে ব্যর্থ হয়েছে! মেমোরি পূর্ণ হতে পারে": "Failed to save data! Memory may be full", "তাগাদার তালিকা": "Collection list", "তারিখ": "Date", "তারিখ ও সময়": "Date & time", "তারিখ পেরোলে হোমে": "When the date passes, it will appear on Home in the", "তারিখ বেছে": "choose date", "তারিখ মুছুন": "Clear date", "তারিখ:": "Date:", "তালিকা থেকে": "From the list", "তৈরি করা যায়নি": "could not be created", "তৈরি হচ্ছে...": "Creating...", "তৈরি হচ্ছে... একটু অপেক্ষা করুন": "Creating... please wait a moment", "তৈরি:": "Created:", "থেকে": "from", "থেকে আপনার": "from your", "দর": "Rate", "দর (₹)": "Rate (₹)", "দিন": "days", "দিন আগে": "days ago", "দিন আগে থেকে": "days ago", "দিন পরে": "days later", "দিন বন্ধ করুন": "Close the day", "দিনের খতিয়ান": "Day book", "দিনের সমাপ্তি রিপোর্ট (Day End Closing)": "Day-end closing report", "দিয়ে এনক্রিপ্ট করা আছে": "encryption.", "দিয়ে এনক্রিপ্ট হবে": "encryption.", "দিয়ে ওই": "to attach that", "দেয়:": "Due:", "দৈনিক খরচ": "Daily expenses", "দোকান খুলুন": "Open the shop", "দোকান খুলুন (দিন শুরু করুন)": "Open the shop (start the day)", "দোকান খোলা": "Shop open", "দোকান চালু করুন": "Start the shop", "দোকান নির্বাচন ও পরিচালনা": "Select & manage shops", "দোকান পরিবর্তন করুন": "Change shop", "দোকান বদলান": "Switch shop", "দোকান ভাড়া": "Shop rent", "দোকান মুছুন": "Delete shop", "দোকান যোগ করুন": "Add shop", "দোকানটি সফলভাবে যোগ করা হয়েছে!": "shop was added successfully!", "দোকানের খরচ": "Shop expenses", "দোকানের খরচ:": "Shop expenses:", "দোকানের খাতা": "Shop Ledger", "দোকানের খাতা খুলতে পাসওয়ার্ড দিন": "Enter the password to open the shop ledger", "দোকানের ঠিকানা (ঐচ্ছিক)": "Shop address (optional)", "দোকানের তথ্য সফলভাবে আপডেট হয়েছে!": "Shop details were updated successfully!", "দোকানের ধরন / ক্যাটাগরি": "Shop type / category", "দোকানের নাম": "Shop name", "দোকানের নাম দিন!": "Enter the shop name!", "দোকানের নাম:": "Shop name:", "দোকানের প্রথম সেটআপ": "First-time shop setup", "দোকানের ফোন নম্বর (ঐচ্ছিক)": "Shop phone number (optional)", "দোকানের সমস্ত বাকি, বিল ও হিসাব চিরতরে মুছে যাবে!": "All dues, bills and accounts of this shop will be deleted permanently!", "দোকানের সিল ও স্বাক্ষর": "Shop seal & signature", "দয়া করে গ্রাহকের নাম দিন!": "Please enter the customer's name!", "ধন্যবাদ": "Thank you", "ধন্যবাদ!": "Thank you!", "ধরন": "Type", "ধাতু": "Metal", "ধাতু/ক্যারেট": "Metal/Carat", "নগদ": "Cash", "নগদ (Cash)": "Cash", "নগদ আদায় (বিল + বাকি জমা)": "Cash collected (bills + due payments)", "নগদ গ্রাহক": "Cash customer", "নগদ জমা:": "Cash deposit:", "নতুন আইটেম গুদামে যোগ করুন": "Add a new item to the warehouse", "নতুন ওষুধের মেমো": "New medicine memo", "নতুন খাবারের বিল": "New food bill", "নতুন গয়নার মেমো": "New jewellery memo", "নতুন গ্রাহক / নগদ গ্রাহক": "New customer / Cash customer", "নতুন গ্রাহক যোগ করুন": "Add a new customer", "নতুন দোকান যোগ করুন": "Add a new shop", "নতুন দোকানের খরচ যোগ করুন": "Add a new shop expense", "নতুন পাসওয়ার্ড": "New password", "নতুন পাসওয়ার্ড ও পুনরুদ্ধার শব্দ দিন": "Enter a new password and recovery word", "নতুন পাসওয়ার্ড কমপক্ষে": "New password must be at least", "নতুন পাসওয়ার্ড নিশ্চিত করুন": "Confirm new password", "নতুন পাসওয়ার্ড নিশ্চিতকরণ মেলেনি!": "New password confirmation does not match!", "নতুন পাসওয়ার্ড সেট করুন": "Set a new password", "নতুন পুনরুদ্ধার শব্দ": "New recovery word", "নতুন পুনরুদ্ধার শব্দ কমপক্ষে": "New recovery word must be at least", "নতুন পোশাকের মেমো": "New clothing memo", "নতুন বাকি দেওয়া": "New credit given", "নতুন বাকি:": "New credit:", "নতুন বিল": "New bill", "নতুন বিল তৈরি করুন": "Create a new bill", "নতুন মাল এল? (ভুল ঠিক করতে মাইনাস সংখ্যাও দিতে পারেন)": "new stock arrived? (you can also enter a negative number to correct a mistake)", "নতুন মিষ্টির মেমো": "New sweets memo", "নতুন মুদি মেমো": "New grocery memo", "নমস্কার": "Hello", "নম্বর নেই": "No number", "নম্বর পরিবর্তন": "Change number", "নাম ও স্টক সঠিকভাবে দিন!": "Enter the name and stock correctly!", "নিট নগদ (আদায় − খরচ)": "Net cash (collected − expenses)", "নিরাপত্তা আপগ্রেড": "Security upgrade", "নিরাপত্তা তথ্য সংরক্ষণ করুন": "Save security details", "নিরাপদ থাকতে আপগ্রেডের আগে পুরনো ডেটার একটি কপি রেখে দিতে পারেন": "To stay safe, you can keep a copy of your old data before upgrading", "নোট (ঐচ্ছিক)": "Note (optional)", "পণ্য": "Item", "পণ্যের নাম": "Item name", "পণ্যের নাম দিন!": "Enter the item name!", "পণ্যের বিবরণ": "Item details", "পরিবর্তন না করতে চাইলে ফাঁকা রাখুন": "Leave blank if you do not want to change", "পরিবহন ও ভ্যান ভাড়া": "Transport & van hire", "পরিমাণ": "Quantity", "পরিমাণ (₹)": "Amount (₹)", "পরিশোধিত": "Paid up", "পরিশোধের তারিখ": "Payment date", "পরিশোধের তারিখ পেরিয়ে গেছে": "Payment date has passed", "পরিশোধের তারিখ:": "Payment date:", "পরের অংশ": "continued", "পরের পরিশোধের তারিখ:": "Next payment date:", "পরোটা-সবজি": "Paratha-sabzi", "পর্যন্ত": "until", "পাঠানো যায়নি": "could not be sent", "পাঠানো হল": "has been sent", "পাতা (strip)": "Strip", "পান্তুয়া": "Pantua", "পাসওয়ার্ড": "Password", "পাসওয়ার্ড / পুনরুদ্ধার শব্দ": "Password / Recovery word", "পাসওয়ার্ড ও নিরাপত্তা তথ্য সফলভাবে আপডেট করা হয়েছে!": "Password and security details were updated successfully!", "পাসওয়ার্ড ও নিরাপত্তা পরিবর্তন": "Change password & security", "পাসওয়ার্ড কমপক্ষে": "Password must be at least", "পাসওয়ার্ড ঠিক আছে, কিন্তু সংরক্ষিত ডেটা পড়া যাচ্ছে না": "The password is correct, but the saved data cannot be read", "পাসওয়ার্ড থেকে আলাদা রাখুন": "Keep it different from the password", "পাসওয়ার্ড দিন": "Enter password", "পাসওয়ার্ড নিশ্চিত করুন": "Confirm password", "পাসওয়ার্ড নিশ্চিতকরণ মেলেনি!": "Password confirmation does not match!", "পাসওয়ার্ড পুনরুদ্ধার (Forgot Password)": "Password recovery (Forgot Password)", "পাসওয়ার্ড বা পুনরুদ্ধার শব্দ পরিবর্তন করার জন্য বর্তমান পাসওয়ার্ড দেওয়া বাধ্যতামূলক": "The current password is mandatory to change the password or recovery word", "পাসওয়ার্ড ভুলে গেছেন?": "Forgot your password?", "পাসওয়ার্ড ভুলে গেলে এই শব্দ দিয়ে রিসেট করতে পারবেন": "If you forget your password, you can reset it with this word", "পাসওয়ার্ড ভুলে গেলে এই শব্দ দিয়ে রিসেট করতে হবে": "If you forget your password, you will have to reset it with this word", "পাসওয়ার্ড ভুলে গেলে পুনরুদ্ধারের জন্য ব্যবহৃত হয়": "Used for recovery if you forget your password", "পাসওয়ার্ড রিসেট ও লগইন করুন": "Reset password & log in", "পাসওয়ার্ড লিখুন": "Enter the password", "পাসওয়ার্ড লিখুন!": "Enter the password!", "পাসওয়ার্ড সফলভাবে পরিবর্তন করা হয়েছে!": "Password was changed successfully!", "পাসওয়ার্ড সফলভাবে সেট করা হয়েছে!": "Password was set successfully!", "পিস": "Pcs", "পুনরায় একই পাসওয়ার্ড দিন": "Enter the same password again", "পুনরায় পাসওয়ার্ড লিখুন": "Enter the password again", "পুনরায় লিখুন": "Enter again", "পুনরায় নতুন পাসওয়ার্ড দিন": "Enter the new password again", "পুনরুদ্ধার শব্দ": "Recovery word", "পুনরুদ্ধার শব্দ (Recovery Word)": "Recovery word (Recovery Word)", "পুনরুদ্ধার শব্দ কমপক্ষে": "Recovery word must be at least", "পুনরুদ্ধার শব্দ পাসওয়ার্ডের থেকে আলাদা হতে হবে!": "The recovery word must be different from the password!", "পুনরুদ্ধার শব্দ লিখুন": "Enter the recovery word", "পুনরুদ্ধার শব্দ লিখুন!": "Enter the recovery word!", "পুনরুদ্ধার শব্দ — দুটোই ভুলে গেলে ডেটা আর ফেরত আনার কোনো উপায় নেই": "recovery word — if you forget both, there is no way to get the data back", "পুরনো ডেটা ডাউনলোড করুন": "Download the old data", "পুরনো ব্যাকআপ": "Old backup", "পুরো টাকা পেইড": "Full amount paid", "পুরোনো সোনা / রূপা জমা বাবদ ছাড় (₹)": "Discount for old gold / silver deposited (₹)", "পুরোনো সোনা জমা": "Old gold deposited", "পূর্বে সেট করা পুনরুদ্ধার শব্দটি দিয়ে নতুন পাসওয়ার্ড দিন": "Enter a new password using the recovery word you set earlier", "পূর্বের জের": "Previous balance", "পূর্বের দিনের খতিয়ান লগ": "Previous days' day-book log", "পূর্বের বকেয়া বাকি (এই বিলের সাথে যুক্ত নয়)": "Previous outstanding due (not part of this bill)", "পৃষ্ঠা": "Page", "পৃষ্ঠার": "-page", "পেইড": "Paid", "পেইড অ্যামাউন্ট (Paid)": "Paid amount (Paid)", "পেমেন্ট মাধ্যম (জমা দিলে) — নগদ /": "Payment mode (if depositing) — Cash /", "পেমেন্ট মাধ্যম (পেইড অ্যামাউন্ট কীভাবে এল?) — নগদ /": "Payment mode (how was the paid amount received?) — Cash /", "পেরিয়ে গেছে": "has passed", "পোশাকের ক্যাশ মেমো": "Clothing cash memo", "পোশাকের বিবরণ": "Clothing details", "প্যাকেট": "Packet", "প্যান্ট": "Pants", "প্যারাসিটামল": "Paracetamol", "প্রতিদিনের সকালের ওপেনিং ক্যাশ, সারাদিনের বিক্রি এবং রাতের ক্লোজিং ব্যালেন্সের ইতিহাস": "The history of each day's opening cash, the day's sales and the closing balance at night", "প্রিন্ট": "Print", "প্রিন্ট /": "Print /", "প্রিন্ট বাটনে": "Use the Print button's", "প্লেট": "Plate", "ফাইল": "File", "ফাইল ডাউনলোড করুন": "Download file", "ফাইলটি অ্যাটাচ করে পাঠান": "file and send it", "ফাইলটি পড়তে সমস্যা হয়েছে:": "There was a problem reading the file:", "ফিরে যান": "Go back", "ফুড বিল": "Food bill", "ফোন নম্বর (বিলে থাকবে)": "Phone number (will appear on the bill)", "বকেয়া বাকি:": "Outstanding due:", "বক্স": "Box", "বদলের জন্য মেমোটি সঙ্গে আনুন": "Bring this memo with you for exchange", "বর্তমান দোকানের তথ্য সম্পাদনা": "Edit current shop details", "বর্তমান পাসওয়ার্ড": "Current password", "বর্তমান পাসওয়ার্ড দিন": "Enter the current password", "বর্তমান পাসওয়ার্ড দিন!": "Enter the current password!", "বর্তমান পাসওয়ার্ড ভুল!": "Current password is wrong!", "বর্তমান বাকি": "Current due", "বর্তমান বাকি (₹)": "Current due (₹)", "বর্তমান বাকি আছে (আপনি পাবেন)": "Currently due (you will receive)", "বর্তমান ব্যালেন্স:": "Current balance:", "বর্তমান মোট বাকি": "Current total due", "বর্তমান স্টক": "Current stock", "বর্তমান স্টক:": "Current stock:", "বস্ত্রালয় ও পোশাকের দোকান": "Clothing & garment shop", "বা": "or", "বাকি": "Due", "বাকি (₹)": "Due (₹)", "বাকি অংশ": "Remaining part", "বাকি আছে": "Due remaining", "বাকি খাতা": "Credit ledger", "বাকি খাতায়": "in the credit ledger", "বাকি খাতায় কিছু যাবে না": "nothing will go to the credit ledger", "বাকি টাকা এখনও দেয়নি": "the remaining amount has not been paid yet", "বাকি থাকলে পরিশোধের তারিখ (ঐচ্ছিক)": "Payment date if any amount remains (optional)", "বাকি দিচ্ছেন (আইটেমভিত্তিক বিল বা টাকা)": "Giving credit (itemized bill or amount)", "বাকি দিলাম": "Gave credit", "বাকি দিলাম (বিল)": "Gave credit (bill)", "বাকি দেওয়া": "Credit given", "বাকি পরিশোধের তারিখ (ঐচ্ছিক)": "Payment date for the due amount (optional)", "বাকি শূন্য (০.০০)": "Due is zero (0.00)", "বাক্স": "Box", "বাটনে চেপে স্টক বাড়ান": "press the button to increase stock", "বাটি": "Bowl", "বাতিল": "Cancel", "বিক্রয়": "Sale", "বিক্রয়দর (₹)": "Selling rate (₹)", "বিক্রয়দর (₹/একক)": "Selling rate (₹/unit)", "বিক্রি (₹)": "Sales (₹)", "বিদ্যুৎ ও কারেন্ট বিল": "Electricity & power bill", "বিদ্যুৎ বিল": "Electricity bill", "বিপদজনক এলাকা": "Danger zone", "বিবরণ": "Details", "বিবরণ / নোট (ঐচ্ছিক)": "Details / Note (optional)", "বিবরণ/মন্তব্য": "Details/Remarks", "বিবিধ": "Miscellaneous", "বিবিধ খরচ": "Miscellaneous expenses", "বিল": "Bill", "বিল তৈরির সময় পণ্যের নাম মিললে স্টক নিজে থেকে কমে যাবে এবং দর বসে যাবে": "When creating a bill, if the item name matches, stock reduces automatically and the rate is filled in", "বিল সংরক্ষণ করুন ও মেমো দেখুন": "Save bill and view memo", "বিল হোয়াটসঅ্যাপে পাঠান": "Send bill on WhatsApp", "বিলে নগদ / বাকি জমা": "Cash / due payments on bills", "বিলের চেয়ে বেশি দিয়েছে": "paid more than the bill", "বিলের তালিকা": "Bill list", "বিলের মোট (Yet to pay)": "Bill total (Yet to pay)", "বিলের মোট টাকা শূন্য হতে পারে না!": "The bill total cannot be zero!", "বোতল": "Bottle", "ব্যবহার করুন": "option", "ব্যাকআপ ও রিস্টোর (সব দোকান সহ)": "Backup & restore (all shops included)", "ব্যাকআপ খুলুন": "Open backup", "ব্যাকআপ ডাউনলোড করুন (JSON)": "Download backup (JSON)", "ব্যাকআপ থেকে রিস্টোর করুন": "Restore from backup", "ব্যাকআপ নেওয়ার সময়কার পাসওয়ার্ড (অথবা পুনরুদ্ধার শব্দ) দিন": "Enter the password (or recovery word) from when the backup was taken", "ব্যাকআপ ফাইল থেকে রিস্টোর করুন": "Restore from backup file", "ব্যাকআপ ফাইল নিয়মিত ডাউনলোড করে রাখুন": "Download backup files regularly and keep them", "ব্যাকআপ ফাইল রিস্টোর করুন": "Restore backup file", "ব্যাকআপ ফাইলও এনক্রিপ্টেড — খুলতে ব্যাকআপ নেওয়ার সময়কার পাসওয়ার্ড (বা পুনরুদ্ধার শব্দ) লাগবে": "The backup file is also encrypted — you will need the password (or recovery word) from when the backup was taken to open it", "ব্যাকআপ ফাইলটি নষ্ট বা অসম্পূর্ণ!": "The backup file is damaged or incomplete!", "ব্যাকআপ ফাইলের গঠন সঠিক নয়! অনুগ্রহ করে সঠিক ব্যাকআপ ফাইল নির্বাচন করুন": "The backup file structure is not valid! Please select a correct backup file", "ব্যাকআপ সফলভাবে রিস্টোর করা হয়েছে!": "Backup was restored successfully!", "ব্যাকআপের পাসওয়ার্ড": "Backup password", "ব্যান্ডেজ": "Bandage", "ব্যালেন্স (₹)": "Balance (₹)", "ভরি": "Bhori", "ভাংতি বা খুচরো কত টাকা নিয়ে ক্যাশবাক্স শুরু করছেন": "how much small change you are starting the cash drawer with", "ভিটামিন ট্যাবলেট": "Vitamin tablet", "ভুল পাসওয়ার্ড!": "Wrong password!", "ভুল পাসওয়ার্ড! আবার চেষ্টা করুন": "Wrong password! Try again", "ভুল পাসওয়ার্ড! ব্যাকআপ খোলা যায়নি": "Wrong password! The backup could not be opened", "ভুল পুনরুদ্ধার শব্দ! আবার চেষ্টা করুন": "Wrong recovery word! Try again", "মজুরি": "Making charges", "মজুরি (₹)": "Making charges (₹)", "মজুরি খরচ": "Making charges expense", "মন্তব্য / বিবরণ (ঐচ্ছিক)": "Remarks / Details (optional)", "মন্তব্য/নোট": "Remarks/Note", "মসুর ডাল": "Masoor dal", "মাত্র": "only", "মালপত্র পরিবহন": "Goods transport", "মালিকের সর্বমোট পাওনা বাকি": "Owner's total outstanding due", "মাস বেছে নিন": "Choose a month", "মাস বেছে নিন (যেমন 2026-11)": "Choose a month (e.g. 2026-11)", "মাসিক রিপোর্ট": "Monthly report", "মাসিক রিপোর্ট (PDF)": "Monthly report (PDF)", "মাসিক রিপোর্ট —": "Monthly report —", "মাসের হিসাব রিপোর্ট (PDF)": "month's accounts report (PDF)", "মিটার": "Metre", "মিনিকেট চাল": "Miniket rice", "মিলিগ্রাম": "Milligram", "মিষ্টান্ন ভাণ্ডার ও মিষ্টির দোকান": "Sweets shop & confectionery", "মিষ্টি": "Sweets", "মিষ্টি দই": "Sweet curd (mishti doi)", "মিষ্টিমুখ করুন, ধন্যবাদ! আবার আসবেন": "Enjoy your sweets, thank you! Please visit again", "মিষ্টির নাম": "Sweet name", "মিষ্টির মেমো": "Sweets memo", "মুছুন": "Delete", "মুছে ফেলা গ্রাহক": "Deleted customer", "মুদিখানা ও ডিপার্টমেন্টাল": "Grocery & departmental store", "মেমো": "Memo", "মেমো নং": "Memo no.", "মেয়াদ ও ব্যাচ দেখে ওষুধ নিন": "Check the expiry and batch before taking medicines", "মেয়াদ পেরিয়েছে": "Overdue", "মেরামত ও অন্যান্য": "Repairs & others", "মেরামত ও যত্ন": "Repairs & maintenance", "মোট": "Total", "মোট (₹)": "Total (₹)", "মোট আইটেম": "Total items", "মোট ওষুধ মূল্য:": "Total medicine value:", "মোট খাবারের বিল:": "Total food bill:", "মোট গয়নার মূল্য (মজুরিসহ):": "Total jewellery value (incl. making charges):", "মোট পণ্য মূল্য:": "Total goods value:", "মোট পোশাকের মূল্য:": "Total clothing value:", "মোট বাকি (বর্তমান দোকানে)": "Total due (in the current shop)", "মোট বাকি:": "Total due:", "মোট বিক্রি (' + d.bills.length + 'টি বিল)": "Total sales (", "মোট বিল": "Total bill", "মোট বিল:": "Total bill:", "মোট মিষ্টির মূল্য:": "Total sweets value:", "মোট মূল্য:": "Total value:", "মোবাইল": "Mobile", "মোবাইল (ঐচ্ছিক)": "Mobile (optional)", "মোবাইল নম্বর": "Mobile number", "মোবাইল নম্বর (ঐচ্ছিক)": "Mobile number (optional)", "মোবাইল নম্বর:": "Mobile number:", "য় দেখা যাবে": "will be shown", "যাচাই ব্যর্থ হয়েছে": "Verification failed", "যাচাইয়ের জন্য ব্যাকআপের পাসওয়ার্ড দিন": "Enter the backup's password for verification", "যাবে:": "will go:", "যেমন:": "e.g.:", "যেমন: ক্যাশ পেমেন্ট বা মেমো নোট": "e.g.: cash payment or memo note", "যেমন: দুটি শব্দ মিলিয়ে একটি বাক্যাংশ": "e.g.: a phrase made from two words", "যেমন: প্রিয় বই বা স্থান": "e.g.: a favourite book or place", "যেমন: বিকালের চা ও বিস্কুট": "e.g.: evening tea and biscuits", "যেমন: মা তারা ভাণ্ডার": "e.g.: Maa Tara Bhandar", "যেমন: মা তারা মিষ্টান্ন ভাণ্ডার": "e.g.: Maa Tara Sweets Bhandar", "যেমন: মিনিকেট চাল": "e.g.: Miniket rice", "যেমন: মেমো নোট": "e.g.: memo note", "যেমন: রহিম (খালি রাখলে 'নগদ গ্রাহক')": "e.g.: Rahim (leave blank for 'Cash customer')", "যেমন: রহিম শেখ": "e.g.: Rahim Sheikh", "যেমন: সোনারপুর বাজার, কলকাতা": "e.g.: Sonarpur Bazar, Kolkata", "রসগোল্লা": "Rasgulla", "রসমালাই": "Rasmalai", "রিপোর্ট": "Report", "রিপোর্ট ও সেটিংস": "Reports & settings", "রিপোর্ট তারিখ:": "Report date:", "রিপোর্ট দেখুন ও": "View the report and save as", "রিপোর্ট:": "Report:", "রিপোর্টের বিষয়:": "Report subject:", "রিসেট হচ্ছে": "Resetting", "রিস্টোর করতে সমস্যা হয়েছে:": "A problem occurred while restoring:", "রূপার কয়েন": "Silver coin", "রূপার নুপুর": "Silver anklet", "রূপো": "Silver", "রেডিমেড কুর্তি": "Readymade kurti", "লগআউট": "Logout", "লগইন করুন": "Log in", "লবণ": "Salt", "লিংক দিয়ে অথবা ফাইলটি সরাসরি (file://) খুলুন": "Open via a link or directly as a file (file://)", "লিটার": "Litre", "লুঙ্গি": "Lungi", "লেনদেনের ইতিহাস": "Transaction history", "লেনদেনের ধরন": "Transaction type", "লেনদেনের বিবরণ": "Transaction details", "লোড হচ্ছে": "Loading", "শার্ট পিস": "Shirt piece", "শুধু বিলের রেকর্ডে থাকবে": "will remain only in the bill record", "শুরু": "Start", "শুরুর তারিখ শেষের তারিখের পরে হতে পারে না!": "The start date cannot be after the end date!", "শেয়ার / হোয়াটসঅ্যাপে পাঠান": "Share / send on WhatsApp", "সংরক্ষণ করুন": "Save", "সংরক্ষিত ডেটা নষ্ট হয়ে গেছে বা পড়া যাচ্ছে না": "The saved data is damaged or cannot be read", "সংরক্ষিত ডেটা পড়া যাচ্ছে না": "The saved data cannot be read", "সকল গ্রাহকের বাকি তালিকা": "List of dues of all customers", "সকল লেনদেনের তালিকা": "List of all transactions", "সকল লেনদেনের রিপোর্ট (CSV)": "All transactions report (CSV)", "সকালে দোকান খোলার সময় ওপেনিং ক্যাশ দিয়ে দিন শুরু করুন, সারাদিনের নিখুঁত হিসাব থাকবে": "Start the day with opening cash when opening the shop in the morning, and you will have precise accounts for the whole day", "সকালের ক্যাশ (Opening):": "Morning cash (Opening):", "সকালের ক্যাশ:": "Morning cash:", "সকালের ক্যাশবাক্সের টাকা / ওপেনিং ব্যালেন্স (₹)": "Morning cash drawer money / opening balance (₹)", "সক্রিয়": "Active", "সঠিক টাকার পরিমাণ দিন": "Enter a valid amount", "সঠিক টাকার পরিমাণ দিন (শূন্য বা ঋণাত্মক গ্রহণযোগ্য নয়)": "Enter a valid amount (zero or negative is not acceptable)", "সঠিক টাকার পরিমাণ দিন!": "Enter a valid amount!", "সঠিক মাস বেছে নিন!": "Choose a valid month!", "সঠিক সংখ্যা দিন!": "Enter a valid number!", "সঠিক স্টকের পরিমাণ দিন!": "Enter a valid stock quantity!", "সতর্কতা": "Alert", "সতর্কতা সীমা": "Alert limit", "সন্দেশ": "Sandesh", "সব গ্রাহকের বাকি তালিকা (CSV)": "List of dues of all customers (CSV)", "সব তথ্য এক্সেল বা স্প্রেডশীটে দেখার জন্য": "To view all data in Excel or a spreadsheet", "সব পরিশোধিত": "All settled", "সব পরিশোধিত (০.০০)": "All settled (0.00)", "সব লেনদেন": "All transactions", "সব লেনদেনের জন্য তারিখ ফাঁকা রাখুন, অথবা সময়কাল বেছে নিন": "Leave the dates blank for all transactions, or choose a period", "সময়কাল": "Period", "সমস্ত দোকান মিলিয়ে মোট হিসাব": "Combined total accounts of all shops", "সমস্ত হিসাব সুরক্ষিত থাকবে": "All accounts will remain safe", "সমস্যা হয়েছে:": "A problem occurred:", "সরাসরি এককালীন টাকা": "Direct one-time amount", "সর্বাধিক বিক্রিত আইটেম": "Best-selling items", "সর্ষের তেল": "Mustard oil", "সহজে ভেঙে ফেলা যায় — লম্বা পাসওয়ার্ড বা কয়েকটি শব্দ মিলিয়ে বানান": "is easy to crack — use a long password or combine a few words", "সাধারণ দোকান": "General shop", "সাধারণ দোকান ও অন্যান্য": "General shop & others", "সাধারণ পণ্য ১": "General item 1", "সাধারণ পণ্য ২": "General item 2", "সাবান": "Soap", "সাম্প্রতিক বিল": "Recent bills", "সিঙাড়া": "Singara (samosa)", "সুতির শাড়ি": "Cotton saree", "সুবিধামতো মিটিয়ে দেবেন": "Please settle it at your convenience", "সুস্থ থাকুন!": "Stay healthy!", "সেট": "Set", "সেটিংস": "Settings", "সোনা": "Gold", "সোনার আংটি (২২K)": "Gold ring (22K)", "সোনার চেন (২২K)": "Gold chain (22K)", "স্টক": "Stock", "স্টক ঋণাত্মক": "Stock negative", "স্টক তালিকা (CSV)": "Stock list (CSV)", "স্টক শেষ": "Out of stock", "স্টক সতর্কতা:": "Stock alert:", "স্টকের মূল্য (ক্রয়দরে)": "Stock value (at purchase rate)", "স্টেটমেন্ট": "Statement", "স্টেটমেন্ট তৈরি করুন": "Create statement", "স্টেটমেন্ট —": "Statement —", "স্টেটমেন্টের তারিখ": "Statement date", "স্পেশাল চা": "Special tea", "স্বর্ণ ও রৌপ্য অলঙ্কার (জুয়েলারি)": "Gold & silver jewellery (jeweller)", "স্যাভলন / ডেটল": "Savlon / Dettol", "হলুদ গুঁড়ো": "Turmeric powder", "হাঁড়ি": "Handi (pot)", "হিসাব মিলিয়ে দিন বন্ধ করুন": "Match the accounts and close the day", "হোম পেজ থেকে দিন শেষে": "At the end of the day, from the Home page", "হোম পেজে ফিরে যান": "Go back to the Home page", "হোয়াটসঅ্যাপ চ্যাটে": "In the WhatsApp chat, use", "হোয়াটসঅ্যাপে তাগাদা পাঠান": "Send collection reminder on WhatsApp", "হোয়াটসঅ্যাপে তাগাদা পাঠানোর জন্য গ্রাহকের সঠিক মোবাইল নম্বর যোগ করুন": "Add the customer's correct mobile number to send a collection reminder on WhatsApp", "হোয়াটসঅ্যাপে পাকা বিল ও তাগাদা পাঠানোর জন্য মোবাইল নম্বর দিন": "Enter the mobile number to send final bills and collection reminders on WhatsApp", "১৫ দিন": "15 days", "৩০ দিন": "30 days", "৭ দিন": "7 days", "টি": "", "আপনার মোট বাকি": "your total due is", "হিসাবের স্টেটমেন্ট (PDF) পাঠানো হল": "account statement (PDF) has been sent", "অংশে দেখা যাবে": "section", "অবশিষ্ট": "left", "মোট বিক্রি": "Total sales", "৪ সংখ্যার": "A 4-digit", "মোট ওষুধ মূল্য": "Total medicine value", "মোট খাবারের বিল": "Total food bill", "মোট গয়নার মূল্য (মজুরিসহ)": "Total jewellery value (incl. making charges)", "মোট পণ্য মূল্য": "Total goods value", "মোট পোশাকের মূল্য": "Total clothing value", "মোট মিষ্টির মূল্য": "Total sweets value", "মোট মূল্য": "Total value"}, "hi": {"অক্ষর": "अक्षर", "অক্ষর, পাসওয়ার্ড থেকে আলাদা": "अक्षर, पासवर्ड से अलग", "অক্ষরের হতে হবে!": "अक्षरों का होना चाहिए!", "অক্ষরের হলে সেটাই আবার দিতে পারেন": "अक्षर या अधिक का हो तो वही दोबारा दे सकते हैं", "অগ্রিম জমা": "अग्रिम जमा", "অগ্রিম জমা আছে (গ্রাহক পাবে)": "अग्रिम जमा है (ग्राहक को मिलेगा)", "অতিরিক্ত জমা": "अतिरिक्त जमा", "অনুগ্রহ করে নতুন পাসওয়ার্ড অথবা নতুন পুনরুদ্ধার শব্দ লিখুন": "कृपया नया पासवर्ड या नया रिकवरी शब्द लिखें", "অনুগ্রহ করে প্রতিটি আইটেমের নাম, সঠিক পরিমাণ ও দর পূরণ করুন!": "कृपया हर आइटम का नाम, सही मात्रा और दर भरें!", "অন্তত একটি আইটেম যোগ করুন!": "कम से कम एक आइटम जोड़ें!", "অন্তত একটি দোকান থাকা আবশ্যক!": "कम से कम एक दुकान होना ज़रूरी है!", "অন্যের সাথে শেয়ার করা ফোন/কম্পিউটারে এটি বন্ধ রাখুন — তখন প্রতিবার খোলার সময় পাসওয়ার্ড লাগবে": "साझा फ़ोन/कंप्यूटर पर इसे बंद रखें — तब हर बार खोलते समय पासवर्ड लगेगा", "অবস্থা": "स्थिति", "অ্যান্টাসিড / গ্যাস ট্যাবলেট": "एंटासिड / गैस की गोली", "আইটেম ও দর দিলে এখানে হিসাব দেখা যাবে": "आइटम और दर डालने पर यहाँ हिसाब दिखेगा", "আইটেম যোগ করুন": "आइटम जोड़ें", "আইটেম সম্পাদনা": "आइटम संपादित करें", "আইটেমভিত্তিক বিল": "आइटम वाला बिल", "আগে একজন গ্রাহক যোগ করুন": "पहले एक ग्राहक जोड़ें", "আগে কোনো পুনরুদ্ধার শব্দ সেট করা ছিল না": "पहले कोई रिकवरी शब्द सेट नहीं था", "আগে থেকে ব্যাকআপ ফাইল আছে?": "पहले से बैकअप फ़ाइल है?", "আগে যেটা সেট করেছিলেন": "जो पहले सेट किया था", "আগে সেট করা পুনরুদ্ধার শব্দটি দিন এবং নতুন পাসওয়ার্ড বানান": "पहले सेट किया रिकवरी शब्द दें और नया पासवर्ड बनाएँ", "আগের পাসওয়ার্ড": "पिछला पासवर्ड", "আগের পুনরুদ্ধার শব্দ": "पिछला रिकवरी शब्द", "আগের পুনরুদ্ধার শব্দ লিখুন!": "पिछला रिकवरी शब्द लिखें!", "আগেরটি": "पिछला", "আজ": "आज", "আজ দোকান এখনও খোলা হয়নি": "आज दुकान अभी तक नहीं खुली है", "আজ দোকানের খরচ:": "आज दुकान का खर्च:", "আজ নগদ জমা": "आज नकद जमा", "আজ নগদ জমা পেলেন:": "आज नकद जमा मिला:", "আজ নতুন বাকি": "आज नया बाकी", "আজ নতুন বাকি দেওয়া হয়েছে:": "आज नया बाकी दिया गया:", "আজকের খরচ": "आज का खर्च", "আজকের দিনের কেনাবেচা ও হিসাব শুরু করার জন্য সকালের প্রারম্ভিক ক্যাশ লিখুন": "आज की खरीद-बिक्री और हिसाब शुरू करने के लिए सुबह का शुरुआती कैश लिखें", "আজকের দিনের খতিয়ান সফলভাবে সংরক্ষিত হয়েছে!": "आज का दिन का खाता सफलतापूर्वक सहेजा गया!", "আটা": "आटा", "আনা": "आना", "আপডেটেড": "अपडेटेड", "আপনার কাছে ব্যাকআপ ফাইল থাকলে সেখান থেকে রিস্টোর করুন": "अगर आपके पास बैकअप फ़ाइल है तो उससे रीस्टोर करें", "আপনার ডেটা মোছা হয়নি": "आपका डेटा मिटाया नहीं गया है", "আপনার বাকি": "आपका बाकी", "আপনার সব ডেটা": "आपका सारा डेटा", "আপনার সব হিসাব এই পাসওয়ার্ড দিয়ে এনক্রিপ্ট (AES-256) হয়ে ফোনে থাকবে": "आपके सारे हिसाब इस पासवर्ड से एन्क्रिप्ट (AES-256) होकर फ़ोन में रहेंगे", "আপনার সমস্ত তথ্য অক্ষুণ্ণ থাকবে": "आपकी सारी जानकारी सुरक्षित रहेगी", "আপনার সমস্ত দোকান:": "आपकी सभी दुकानें:", "আপনার সমস্ত দোকানের সমস্ত হিসাবের ব্যাকআপ ডাউনলোড করে নিরাপদে রাখুন অথবা নতুন ফোনে রিস্টোর করুন": "अपनी सभी दुकानों के सभी हिसाब का बैकअप डाउनलोड करके सुरक्षित रखें या नए फ़ोन में रीस्टोर करें", "আপনার সহযোগিতার জন্য ধন্যবাদ": "आपके सहयोग के लिए धन्यवाद", "আপনি কি নিশ্চিত আজকের দিনের হিসাব ক্লোজ ও সংরক্ষণ করতে চান?": "क्या आप आज का हिसाब बंद करके सहेजना चाहते हैं?", "আপনি কি নিশ্চিত এই খরচের এন্ট্রিটি মুছে ফেলতে চান?": "क्या आप इस खर्च की एंट्री मिटाना चाहते हैं?", "আপনি কি নিশ্চিত এই ব্যাকআপ ফাইলটি রিস্টোর করতে চান? বর্তমান সমস্ত তথ্য প্রতিস্থাপিত হবে": "क्या आप यह बैकअप फ़ाइल रीस्टोर करना चाहते हैं? मौजूदा सारा डेटा बदल जाएगा", "আপনি কি নিশ্চিত এই লেনদেনটি মুছে ফেলতে চান?": "क्या आप यह लेन-देन मिटाना चाहते हैं?", "আপনি কি নিশ্চিত?": "क्या आप निश्चित हैं?", "আবার আসবেন!": "फिर आइएगा!", "আবার চেষ্টা করুন": "फिर से कोशिश करें", "আমাদের উপর আস্থা রাখার জন্য ধন্যবাদ": "हम पर भरोसा रखने के लिए धन्यवाद", "আমাদের এখানে খাওয়ার জন্য ধন্যবাদ": "हमारे यहाँ खाने के लिए धन्यवाद", "আরও": "और", "আরও আইটেম যোগ করুন": "और आइटम जोड़ें", "উপরের ফর্ম থেকে আপনার প্রথম গ্রাহক যোগ করুন": "ऊपर के फ़ॉर्म से अपना पहला ग्राहक जोड़ें", "এ আপনার মোট বাকি": "आपका कुल बाकी", "এ চাপ দিলে খতিয়ান তৈরি হবে": "दबाने पर दिन का खाता बनेगा", "এই গ্রাহককে মুছে দিলে তার সম্পর্কিত সমস্ত লেনদেনের হিসাব চিরতরে মুছে যাবে": "इस ग्राहक को मिटाने पर उससे जुड़े सभी लेन-देन का हिसाब हमेशा के लिए मिट जाएगा", "এই গ্রাহকের কোনো বিল এখনও তৈরি হয়নি": "इस ग्राहक का अभी तक कोई बिल नहीं बना है", "এই গ্রাহকের খতিয়ান ডাউনলোড (CSV)": "इस ग्राहक का खाता डाउनलोड करें (CSV)", "এই গ্রাহকের তথ্য মুছে ফেলা হয়েছে বা বিদ্যমান নেই": "इस ग्राहक की जानकारी मिट चुकी है या मौजूद नहीं है", "এই ডিভাইসে ৩০ দিন লগইন মনে রাখুন": "इस डिवाइस पर 30 दिन लॉगिन याद रखें", "এই নামে আইটেম আগে থেকেই আছে": "इस नाम का आइटम पहले से मौजूद है", "এই নামে আরেকটি আইটেম আছে!": "इस नाम का दूसरा आइटम मौजूद है!", "এই নামে কোনো আইটেম নেই": "इस नाम का कोई आइटम नहीं है", "এই নামে কোনো গ্রাহক পাওয়া যায়নি": "इस नाम का कोई ग्राहक नहीं मिला", "এই ফাইলটি এনক্রিপ্টেড নয়, তাই সাবধানে রাখুন": "यह फ़ाइल एन्क्रिप्टेड नहीं है, इसलिए सावधानी से रखें", "এই বাকি": "यह बाकी", "এই বিলে বাকি": "इस बिल पर बाकी", "এই ব্রাউজার বা লিংকে সুরক্ষিত এনক্রিপশন (Web Crypto) চালু নেই, তাই নিরাপত্তার স্বার্থে খাতা খোলা হয়নি": "इस ब्राउज़र या लिंक में सुरक्षित एन्क्रिप्शन (Web Crypto) चालू नहीं है, इसलिए सुरक्षा के लिए खाता नहीं खोला गया", "এই ব্রাউজারে এনক্রিপশন সাপোর্ট নেই, তাই রিস্টোর করা যাচ্ছে না": "इस ब्राउज़र में एन्क्रिप्शन सपोर्ट नहीं है, इसलिए रीस्टोर नहीं हो सकता", "একক": "इकाई", "একটি নতুন পুনরুদ্ধার শব্দ ও পাসওয়ার্ড সেট করুন": "एक नया रिकवरी शब्द और पासवर्ड सेट करें", "একবার আপগ্রেড করে নিলে পুরনো (এনক্রিপ্ট না করা) কপি মুছে যাবে": "एक बार अपग्रेड करने पर पुरानी (बिना एन्क्रिप्ट की) कॉपी मिट जाएगी", "এক্সেল রিপোর্ট ডাউনলোড (CSV)": "एक्सेल रिपोर्ट डाउनलोड (CSV)", "এখন থেকে এই ব্যাকআপের পাসওয়ার্ডই আপনার খাতার পাসওয়ার্ড": "अब से इस बैकअप का पासवर्ड ही आपके खाते का पासवर्ड है", "এখন থেকে খাতা এনক্রিপ্টেড থাকবে": "अब से खाता एन्क्रिप्टेड रहेगा", "এখন থেকে সব ডেটা": "अब से सारा डेटा", "এখন নগদ জমা দিল কি? (ঐচ্ছিক)": "क्या ग्राहक ने अभी नकद जमा किया? (वैकल्पिक)", "এখনও কোনো খরচ এন্ট্রি করা হয়নি": "अभी तक कोई खर्च एंट्री नहीं की गई है", "এখনও কোনো গ্রাহক যোগ করা হয়নি": "अभी तक कोई ग्राहक नहीं जोड़ा गया है", "এখনও কোনো দিনের ক্লোজিং খতিয়ান নেই": "अभी तक कोई दिन का क्लोज़िंग खाता नहीं है", "এখনও কোনো বাকি বা জমার হিসাব যোগ করা হয়নি": "अभी तक कोई बाकी या जमा का हिसाब नहीं जोड़ा गया है", "এখনও কোনো বিল তৈরি হয়নি": "अभी तक कोई बिल नहीं बना है", "এখনকার পাসওয়ার্ড": "मौजूदा पासवर्ड", "এগ রোল": "एग रोल", "এটা ক্যাশবাক্সে নেই": "यह कैश बॉक्स में नहीं है", "এটি পুরনো (এনক্রিপ্ট না করা) ফরম্যাটের ব্যাকআপ": "यह पुराने (बिना एन्क्रिप्ट किए) फ़ॉर्मेट का बैकअप है", "এতদিন আপনার খাতার ডেটা ফোনে এনক্রিপ্ট ছাড়া সংরক্ষিত ছিল": "अब तक आपके खाते का डेटा फ़ोन में बिना एन्क्रिप्शन के रखा था", "এনক্রিপশন চালু করা যাচ্ছে না": "एन्क्रिप्शन चालू नहीं हो सका", "এনক্রিপ্ট করা হচ্ছে": "एन्क्रिप्ट हो रहा है", "এনক্রিপ্ট করে চালু করুন": "एन्क्रिप्ट करके चालू करें", "এবং": "और", "এর পরিশোধের তারিখ পেরিয়ে গেছে": "की भुगतान तारीख निकल चुकी है", "এর মধ্যে": "इसमें से", "এর মধ্যে মেয়াদ পেরিয়েছে": "इसमें से समय सीमा पार", "এর হিসাবের স্টেটমেন্ট (PDF) পাঠানো হল": "के हिसाब का स्टेटमेंट (PDF) भेजा गया", "ঐচ্ছিক, কমপক্ষে": "वैकल्पिक, कम से कम", "ওআরএস (ORS)": "ओआरएस (ORS)", "ওষুধের ক্যাশ মেমো": "दवा का कैश मेमो", "ওষুধের দোকান ও ফার্মেসি": "दवा की दुकान व फ़ार्मेसी", "ওষুধের নাম": "दवा का नाम", "কত": "कितना", "কফি": "कॉफ़ी", "কবে দেবে?": "कब देंगे?", "কম স্টক": "कम स्टॉक", "কম স্টক সতর্কতা (এর নিচে নামলে জানাবে)": "कम स्टॉक चेतावनी (इससे नीचे जाने पर बताएगा)", "কম স্টক সতর্কতা সীমা": "कम स्टॉक चेतावनी सीमा", "কমপক্ষে": "कम से कम", "করুন": "करें", "কর্মচারীর বেতন": "कर्मचारी का वेतन", "কর্মচারীর বেতন/মজুরি": "कर्मचारी का वेतन/मज़दूरी", "কাজু বরফি": "काजू बर्फी", "কানের দুল": "कान की बालियाँ", "কাপ": "कप", "কার্ড": "कार्ड", "কার্ড (Card)": "कार्ड (Card)", "কার্ড:": "कार्ड:", "কার্ডে এসেছে:": "कार्ड से आया:", "কার্ডে পেলেন (ক্যাশবাক্সের বাইরে):": "कार्ड से मिला (कैश बॉक्स के बाहर):", "কাশির সিরাপ": "खाँसी की सिरप", "কীভাবে টাকা পেলেন? (নগদ / UPI / কার্ড)": "पैसे कैसे मिले? (नकद / UPI / कार्ड)", "কেজি": "किलो", "কেনাকাটার ইতিহাস": "खरीदारी का इतिहास", "কেনাকাটার জন্য ধন্যবাদ": "खरीदारी के लिए धन्यवाद", "কোন তারিখ থেকে": "किस तारीख से", "কোন তারিখ পর্যন্ত": "किस तारीख तक", "কোনো নম্বর দেওয়া নেই": "कोई नंबर नहीं दिया गया", "ক্যাশ ক্লোজিং:": "कैश क्लोज़िंग:", "ক্যাশ মেমো": "कैश मेमो", "ক্যাশ মেমো / বিল": "कैश मेमो / बिल", "ক্যাশবাক্সে টাকা": "कैश बॉक्स में पैसा", "ক্যাশবাক্সে প্রত্যাশিত ক্যাশ:": "कैश बॉक्स में अपेक्षित कैश:", "ক্রমিক": "क्र.सं.", "ক্রয়": "खरीद", "ক্রয়দর (₹)": "खरीद दर (₹)", "ক্রয়দর (₹/একক)": "खरीद दर (₹/इकाई)", "খরচ সংরক্ষণ করুন": "खर्च सहेजें", "খরচের তালিকা": "खर्च की सूची", "খরচের ধরন": "खर्च का प्रकार", "খরচের ধরন অনুযায়ী": "खर्च के प्रकार के अनुसार", "খাতা তৈরি করুন": "खाता बनाएँ", "খাতা লক করা আছে": "खाता लॉक है", "খাতায় প্রবেশ করুন": "खाते में प्रवेश करें", "খাবার, হোটেল ও রেস্তোরাঁ": "खाना, होटल व रेस्तरां", "খাবারের নাম": "खाने का नाम", "খোলা হচ্ছে": "खुल रहा है", "গয়নার ক্যাশ মেমো": "गहनों का कैश मेमो", "গয়নার বিবরণ": "गहनों का विवरण", "গামছা": "गमछा", "গুদাম": "गोदाम", "গুদাম থেকে মুছে ফেলবেন?": "गोदाम से मिटाएँ?", "গুদাম হিসাব মিলিয়ে নিন": "गोदाम का हिसाब मिला लें", "গুদামে আইটেম খুঁজুন...": "गोदाम में आइटम खोजें...", "গুদামে এখনও কোনো আইটেম নেই": "गोदाम में अभी कोई आइटम नहीं है", "গুদামের স্টক তালিকা": "गोदाम की स्टॉक सूची", "গ্রাম": "ग्राम", "গ্রাহক": "ग्राहक", "গ্রাহক আংশিক নগদ দিলে বাকি স্বয়ংক্রিয়ভাবে বাদ যাবে": "ग्राहक कुछ नकद दे तो बाकी अपने आप घट जाएगा", "গ্রাহক এবং তার সমস্ত লেনদেনের তথ্য মুছে যাবে!": "ग्राहक और उनके सभी लेन-देन की जानकारी मिट जाएगी!", "গ্রাহক তালিকা (সর্বোচ্চ বাকি আগে)": "ग्राहक सूची (सबसे ज़्यादा बाकी पहले)", "গ্রাহক পাওয়া যায়নি!": "ग्राहक नहीं मिला!", "গ্রাহক মুছে ফেলুন": "ग्राहक मिटाएँ", "গ্রাহক যোগ করুন": "ग्राहक जोड़ें", "গ্রাহক সম্পূর্ণ টাকা নগদ পরিশোধ করেছেন": "ग्राहक ने पूरा पैसा नकद चुका दिया है", "গ্রাহক স্টেটমেন্ট": "ग्राहक स्टेटमेंट", "গ্রাহকের নতুন মোবাইল নম্বর লিখুন:": "ग्राहक का नया मोबाइल नंबर लिखें:", "গ্রাহকের নাম": "ग्राहक का नाम", "গ্রাহকের নাম বা মোবাইল নম্বর খুঁজুন...": "ग्राहक का नाम या मोबाइल नंबर खोजें...", "গ্রাহকের নাম:": "ग्राहक का नाम:", "গ্রাহকের পাতা থেকেও এই স্টেটমেন্ট বানানো যায়": "ग्राहक के पेज से भी यह स्टेटमेंट बनाया जा सकता है", "গ্রাহকের স্টেটমেন্ট (PDF)": "ग्राहक का स्टेटमेंट (PDF)", "গ্রাহকের স্বাক্ষর": "ग्राहक के हस्ताक्षर", "চমচম": "चमचम", "চলতি মাসের খরচ": "इस महीने का खर्च", "চা পাতা": "चायपत्ती", "চা-নাস্তা": "चाय-नाश्ता", "চা-নাস্তা ও খাবার": "चाय-नाश्ता व खाना", "চাউমিন": "चाउमीन", "চালু ছিল:": "चालू था:", "চিকেন বিরিয়ানি": "चिकन बिरयानी", "চিনি": "चीनी", "জন গ্রাহক": "ग्राहक", "জন গ্রাহকের কাছে মোট পাওনা": "ग्राहकों से कुल लेना है", "জনপ্রিয় আইটেম": "लोकप्रिय आइटम", "জনপ্রিয় আইটেম সাজেশন": "लोकप्रिय आइटम सुझाव", "জমা": "जमा", "জমা (₹)": "जमा (₹)", "জমা নিচ্ছেন (−)": "जमा ले रहे हैं (−)", "জমা পেয়েছি": "जमा मिला", "জমা পেলাম": "जमा मिला", "জমা সাইডে": "जमा की तरफ़", "জমা:": "जमा:", "জিলিপি": "जलेबी", "জোড়া": "जोड़ी", "টাকা": "रुपये", "টাকার পরিমাণ (₹)": "रकम (₹)", "টাটকা মিষ্টি পছন্দ হলে আবার আসুন": "ताज़ी मिठाई पसंद आए तो फिर आइए", "টি আইটেমের স্টক কম:": " आइटम का स्टॉक कम है:", "টি দোকান": " दुकानें", "টি বিল": " बिल", "টি-শার্ট": "टी-शर्ट", "ঠিক আছে": "ठीक है", "ঠিকানা (বিলে থাকবে)": "पता (बिल पर रहेगा)", "ডজন": "दर्जन", "ডাউনলোড": "डाउनलोड", "ডাউনলোড হয়েছে": "डाउनलोड हो गया", "ডাক্তারের পরামর্শ মেনে ওষুধ সেবন করুন": "डॉक्टर की सलाह के अनुसार दवा लें", "ডিজিটাল খাতা ও বিলিং শুরু করার জন্য দোকানের নাম, ধরন ও পাসওয়ার্ড দিন": "डिजिटल खाता और बिलिंग शुरू करने के लिए दुकान का नाम, प्रकार और पासवर्ड दें", "ডিজিটাল বাকি খাতা": "डिजिटल बाकी खाता", "ডিম টোস্ট": "एग टोस्ट", "ডেটা এনক্রিপ্টেড অবস্থায় আছে": "डेटा एन्क्रिप्टेड हालत में है", "ডেটা পড়া যাচ্ছে না": "डेटा पढ़ा नहीं जा रहा", "তথ্য আপডেট করুন": "जानकारी अपडेट करें", "তথ্য পড়তে ব্যর্থ হয়েছে:": "डेटा पढ़ने में विफल:", "তথ্য সংরক্ষণ করতে ব্যর্থ হয়েছে! মেমোরি পূর্ণ হতে পারে": "डेटा सहेजने में विफल! मेमोरी भरी हो सकती है", "তাগাদার তালিকা": "तकादे की सूची", "তারিখ": "तारीख", "তারিখ ও সময়": "तारीख व समय", "তারিখ পেরোলে হোমে": "तारीख निकलने पर होम में", "তারিখ বেছে": "तारीख चुनकर", "তারিখ মুছুন": "तारीख हटाएँ", "তারিখ:": "तारीख:", "তালিকা থেকে": "सूची से", "তৈরি করা যায়নি": "नहीं बन सका", "তৈরি হচ্ছে...": "बन रहा है...", "তৈরি হচ্ছে... একটু অপেক্ষা করুন": "बन रहा है... थोड़ा इंतज़ार करें", "তৈরি:": "बनाया गया:", "থেকে": "से", "থেকে আপনার": "की ओर से आपका", "দর": "दर", "দর (₹)": "दर (₹)", "দিন": "दिन", "দিন আগে": "दिन पहले", "দিন আগে থেকে": "दिन पहले से", "দিন পরে": "दिन बाद", "দিন বন্ধ করুন": "दिन बंद करें", "দিনের খতিয়ান": "दिन का खाता", "দিনের সমাপ্তি রিপোর্ট (Day End Closing)": "दिन के अंत की रिपोर्ट (Day End Closing)", "দিয়ে এনক্রিপ্ট করা আছে": "एन्क्रिप्शन से सुरक्षित है", "দিয়ে এনক্রিপ্ট হবে": "एन्क्रिप्शन से सुरक्षित रहेगा", "দিয়ে ওই": "से वह", "দেয়:": "देय:", "দৈনিক খরচ": "दैनिक खर्च", "দোকান খুলুন": "दुकान खोलें", "দোকান খুলুন (দিন শুরু করুন)": "दुकान खोलें (दिन शुरू करें)", "দোকান খোলা": "दुकान खुली है", "দোকান চালু করুন": "दुकान चालू करें", "দোকান নির্বাচন ও পরিচালনা": "दुकान चुनें व प्रबंधित करें", "দোকান পরিবর্তন করুন": "दुकान बदलें", "দোকান বদলান": "दुकान बदलें", "দোকান ভাড়া": "दुकान का किराया", "দোকান মুছুন": "दुकान मिटाएँ", "দোকান যোগ করুন": "दुकान जोड़ें", "দোকানটি সফলভাবে যোগ করা হয়েছে!": "दुकान सफलतापूर्वक जोड़ी गई!", "দোকানের খরচ": "दुकान का खर्च", "দোকানের খরচ:": "दुकान का खर्च:", "দোকানের খাতা": "दुकान का खाता", "দোকানের খাতা খুলতে পাসওয়ার্ড দিন": "दुकान का खाता खोलने के लिए पासवर्ड दें", "দোকানের ঠিকানা (ঐচ্ছিক)": "दुकान का पता (वैकल्पिक)", "দোকানের তথ্য সফলভাবে আপডেট হয়েছে!": "दुकान की जानकारी सफलतापूर्वक अपडेट हुई!", "দোকানের ধরন / ক্যাটাগরি": "दुकान का प्रकार / श्रेणी", "দোকানের নাম": "दुकान का नाम", "দোকানের নাম দিন!": "दुकान का नाम दें!", "দোকানের নাম:": "दुकान का नाम:", "দোকানের প্রথম সেটআপ": "दुकान का पहला सेटअप", "দোকানের ফোন নম্বর (ঐচ্ছিক)": "दुकान का फ़ोन नंबर (वैकल्पिक)", "দোকানের সমস্ত বাকি, বিল ও হিসাব চিরতরে মুছে যাবে!": "इस दुकान के सभी बाकी, बिल और हिसाब हमेशा के लिए मिट जाएँगे!", "দোকানের সিল ও স্বাক্ষর": "दुकान की मुहर व हस्ताक्षर", "দয়া করে গ্রাহকের নাম দিন!": "कृपया ग्राहक का नाम दें!", "ধন্যবাদ": "धन्यवाद", "ধন্যবাদ!": "धन्यवाद!", "ধরন": "प्रकार", "ধাতু": "धातु", "ধাতু/ক্যারেট": "धातु/कैरेट", "নগদ": "नकद", "নগদ (Cash)": "नकद (Cash)", "নগদ আদায় (বিল + বাকি জমা)": "नकद वसूली (बिल + बाकी जमा)", "নগদ গ্রাহক": "नकद ग्राहक", "নগদ জমা:": "नकद जमा:", "নতুন আইটেম গুদামে যোগ করুন": "गोदाम में नया आइटम जोड़ें", "নতুন ওষুধের মেমো": "नया दवा मेमो", "নতুন খাবারের বিল": "नया खाने का बिल", "নতুন গয়নার মেমো": "नया गहनों का मेमो", "নতুন গ্রাহক / নগদ গ্রাহক": "नया ग्राहक / नकद ग्राहक", "নতুন গ্রাহক যোগ করুন": "नया ग्राहक जोड़ें", "নতুন দোকান যোগ করুন": "नई दुकान जोड़ें", "নতুন দোকানের খরচ যোগ করুন": "दुकान का नया खर्च जोड़ें", "নতুন পাসওয়ার্ড": "नया पासवर्ड", "নতুন পাসওয়ার্ড ও পুনরুদ্ধার শব্দ দিন": "नया पासवर्ड और रिकवरी शब्द दें", "নতুন পাসওয়ার্ড কমপক্ষে": "नया पासवर्ड कम से कम", "নতুন পাসওয়ার্ড নিশ্চিত করুন": "नया पासवर्ड पक्का करें", "নতুন পাসওয়ার্ড নিশ্চিতকরণ মেলেনি!": "नया पासवर्ड पक्का करना मेल नहीं खाया!", "নতুন পাসওয়ার্ড সেট করুন": "नया पासवर्ड सेट करें", "নতুন পুনরুদ্ধার শব্দ": "नया रिकवरी शब्द", "নতুন পুনরুদ্ধার শব্দ কমপক্ষে": "नया रिकवरी शब्द कम से कम", "নতুন পোশাকের মেমো": "नया कपड़ों का मेमो", "নতুন বাকি দেওয়া": "नया बाकी दिया", "নতুন বাকি:": "नया बाकी:", "নতুন বিল": "नया बिल", "নতুন বিল তৈরি করুন": "नया बिल बनाएँ", "নতুন মাল এল? (ভুল ঠিক করতে মাইনাস সংখ্যাও দিতে পারেন)": "नया माल आया? (गलती सुधारने के लिए ऋणात्मक संख्या भी दे सकते हैं)", "নতুন মিষ্টির মেমো": "नया मिठाई मेमो", "নতুন মুদি মেমো": "नया किराना मेमो", "নমস্কার": "नमस्कार", "নম্বর নেই": "नंबर नहीं है", "নম্বর পরিবর্তন": "नंबर बदलें", "নাম ও স্টক সঠিকভাবে দিন!": "नाम और स्टॉक सही दें!", "নিট নগদ (আদায় − খরচ)": "शुद्ध नकद (वसूली − खर्च)", "নিরাপত্তা আপগ্রেড": "सुरक्षा अपग्रेड", "নিরাপত্তা তথ্য সংরক্ষণ করুন": "सुरक्षा जानकारी सहेजें", "নিরাপদ থাকতে আপগ্রেডের আগে পুরনো ডেটার একটি কপি রেখে দিতে পারেন": "सुरक्षित रहने के लिए अपग्रेड से पहले पुराने डेटा की एक कॉपी रख सकते हैं", "নোট (ঐচ্ছিক)": "नोट (वैकल्पिक)", "পণ্য": "सामान", "পণ্যের নাম": "सामान का नाम", "পণ্যের নাম দিন!": "सामान का नाम दें!", "পণ্যের বিবরণ": "सामान का विवरण", "পরিবর্তন না করতে চাইলে ফাঁকা রাখুন": "बदलना न चाहें तो खाली रखें", "পরিবহন ও ভ্যান ভাড়া": "परिवहन व वैन किराया", "পরিমাণ": "मात्रा", "পরিমাণ (₹)": "रकम (₹)", "পরিশোধিত": "चुकता", "পরিশোধের তারিখ": "भुगतान की तारीख", "পরিশোধের তারিখ পেরিয়ে গেছে": "भुगतान की तारीख निकल चुकी है", "পরিশোধের তারিখ:": "भुगतान की तारीख:", "পরের অংশ": "आगे का हिस्सा", "পরের পরিশোধের তারিখ:": "अगली भुगतान तारीख:", "পরোটা-সবজি": "परांठा-सब्ज़ी", "পর্যন্ত": "तक", "পাঠানো যায়নি": "भेजा नहीं जा सका", "পাঠানো হল": "भेजा गया", "পাতা (strip)": "पत्ता (strip)", "পান্তুয়া": "पंतुआ", "পাসওয়ার্ড": "पासवर्ड", "পাসওয়ার্ড / পুনরুদ্ধার শব্দ": "पासवर्ड / रिकवरी शब्द", "পাসওয়ার্ড ও নিরাপত্তা তথ্য সফলভাবে আপডেট করা হয়েছে!": "पासवर्ड और सुरक्षा जानकारी सफलतापूर्वक अपडेट हुई!", "পাসওয়ার্ড ও নিরাপত্তা পরিবর্তন": "पासवर्ड व सुरक्षा बदलें", "পাসওয়ার্ড কমপক্ষে": "पासवर्ड कम से कम", "পাসওয়ার্ড ঠিক আছে, কিন্তু সংরক্ষিত ডেটা পড়া যাচ্ছে না": "पासवर्ड सही है, लेकिन सहेजा गया डेटा पढ़ा नहीं जा रहा", "পাসওয়ার্ড থেকে আলাদা রাখুন": "पासवर्ड से अलग रखें", "পাসওয়ার্ড দিন": "पासवर्ड दें", "পাসওয়ার্ড নিশ্চিত করুন": "पासवर्ड पक्का करें", "পাসওয়ার্ড নিশ্চিতকরণ মেলেনি!": "पासवर्ड पक्का करना मेल नहीं खाया!", "পাসওয়ার্ড পুনরুদ্ধার (Forgot Password)": "पासवर्ड रिकवरी (Forgot Password)", "পাসওয়ার্ড বা পুনরুদ্ধার শব্দ পরিবর্তন করার জন্য বর্তমান পাসওয়ার্ড দেওয়া বাধ্যতামূলক": "पासवर्ड या रिकवरी शब्द बदलने के लिए मौजूदा पासवर्ड देना ज़रूरी है", "পাসওয়ার্ড ভুলে গেছেন?": "पासवर्ड भूल गए?", "পাসওয়ার্ড ভুলে গেলে এই শব্দ দিয়ে রিসেট করতে পারবেন": "पासवर्ड भूलने पर इस शब्द से रीसेट कर सकेंगे", "পাসওয়ার্ড ভুলে গেলে এই শব্দ দিয়ে রিসেট করতে হবে": "पासवर्ड भूलने पर इस शब्द से रीसेट करना होगा", "পাসওয়ার্ড ভুলে গেলে পুনরুদ্ধারের জন্য ব্যবহৃত হয়": "पासवर्ड भूलने पर रिकवरी के लिए इस्तेमाल होता है", "পাসওয়ার্ড রিসেট ও লগইন করুন": "पासवर्ड रीसेट करें व लॉगिन करें", "পাসওয়ার্ড লিখুন": "पासवर्ड लिखें", "পাসওয়ার্ড লিখুন!": "पासवर्ड लिखें!", "পাসওয়ার্ড সফলভাবে পরিবর্তন করা হয়েছে!": "पासवर्ड सफलतापूर्वक बदल दिया गया!", "পাসওয়ার্ড সফলভাবে সেট করা হয়েছে!": "पासवर्ड सफलतापूर्वक सेट हो गया!", "পিস": "पीस", "পুনরায় একই পাসওয়ার্ড দিন": "वही पासवर्ड दोबारा दें", "পুনরায় পাসওয়ার্ড লিখুন": "पासवर्ड फिर से लिखें", "পুনরায় লিখুন": "फिर से लिखें", "পুনরায় নতুন পাসওয়ার্ড দিন": "नया पासवर्ड फिर से दें", "পুনরুদ্ধার শব্দ": "रिकवरी शब्द", "পুনরুদ্ধার শব্দ (Recovery Word)": "रिकवरी शब्द (Recovery Word)", "পুনরুদ্ধার শব্দ কমপক্ষে": "रिकवरी शब्द कम से कम", "পুনরুদ্ধার শব্দ পাসওয়ার্ডের থেকে আলাদা হতে হবে!": "रिकवरी शब्द पासवर्ड से अलग होना चाहिए!", "পুনরুদ্ধার শব্দ লিখুন": "रिकवरी शब्द लिखें", "পুনরুদ্ধার শব্দ লিখুন!": "रिकवरी शब्द लिखें!", "পুনরুদ্ধার শব্দ — দুটোই ভুলে গেলে ডেটা আর ফেরত আনার কোনো উপায় নেই": "रिकवरी शब्द — दोनों भूल गए तो डेटा वापस पाने का कोई रास्ता नहीं है", "পুরনো ডেটা ডাউনলোড করুন": "पुराना डेटा डाउनलोड करें", "পুরনো ব্যাকআপ": "पुराना बैकअप", "পুরো টাকা পেইড": "पूरा पैसा चुकता", "পুরোনো সোনা / রূপা জমা বাবদ ছাড় (₹)": "पुराना सोना / चाँदी जमा करने पर छूट (₹)", "পুরোনো সোনা জমা": "पुराना सोना जमा", "পূর্বে সেট করা পুনরুদ্ধার শব্দটি দিয়ে নতুন পাসওয়ার্ড দিন": "पहले सेट किए रिकवरी शब्द से नया पासवर्ड दें", "পূর্বের জের": "पिछला शेष", "পূর্বের দিনের খতিয়ান লগ": "पिछले दिनों के खाते का लॉग", "পূর্বের বকেয়া বাকি (এই বিলের সাথে যুক্ত নয়)": "पिछला बकाया बाकी (इस बिल का हिस्सा नहीं)", "পৃষ্ঠা": "पृष्ठ", "পৃষ্ঠার": "पृष्ठ का", "পেইড": "चुकता", "পেইড অ্যামাউন্ট (Paid)": "चुकता रकम (Paid)", "পেমেন্ট মাধ্যম (জমা দিলে) — নগদ /": "भुगतान माध्यम (जमा करने पर) — नकद /", "পেমেন্ট মাধ্যম (পেইড অ্যামাউন্ট কীভাবে এল?) — নগদ /": "भुगतान माध्यम (चुकता रकम कैसे आई?) — नकद /", "পেরিয়ে গেছে": "निकल चुकी है", "পোশাকের ক্যাশ মেমো": "कपड़ों का कैश मेमो", "পোশাকের বিবরণ": "कपड़ों का विवरण", "প্যাকেট": "पैकेट", "প্যান্ট": "पैंट", "প্যারাসিটামল": "पैरासिटामोल", "প্রতিদিনের সকালের ওপেনিং ক্যাশ, সারাদিনের বিক্রি এবং রাতের ক্লোজিং ব্যালেন্সের ইতিহাস": "हर दिन के सुबह के ओपनिंग कैश, दिन भर की बिक्री और रात के क्लोज़िंग बैलेंस का इतिहास", "প্রিন্ট": "प्रिंट", "প্রিন্ট /": "प्रिंट /", "প্রিন্ট বাটনে": "प्रिंट बटन में", "প্লেট": "प्लेट", "ফাইল": "फ़ाइल", "ফাইল ডাউনলোড করুন": "फ़ाइल डाउनलोड करें", "ফাইলটি অ্যাটাচ করে পাঠান": "फ़ाइल अटैच करके भेजें", "ফাইলটি পড়তে সমস্যা হয়েছে:": "फ़ाइल पढ़ने में समस्या हुई:", "ফিরে যান": "वापस जाएँ", "ফুড বিল": "फ़ूड बिल", "ফোন নম্বর (বিলে থাকবে)": "फ़ोन नंबर (बिल पर रहेगा)", "বকেয়া বাকি:": "बकाया बाकी:", "বক্স": "बॉक्स", "বদলের জন্য মেমোটি সঙ্গে আনুন": "बदलने के लिए यह मेमो साथ लाएँ", "বর্তমান দোকানের তথ্য সম্পাদনা": "मौजूदा दुकान की जानकारी संपादित करें", "বর্তমান পাসওয়ার্ড": "मौजूदा पासवर्ड", "বর্তমান পাসওয়ার্ড দিন": "मौजूदा पासवर्ड दें", "বর্তমান পাসওয়ার্ড দিন!": "मौजूदा पासवर्ड दें!", "বর্তমান পাসওয়ার্ড ভুল!": "मौजूदा पासवर्ड गलत है!", "বর্তমান বাকি": "मौजूदा बाकी", "বর্তমান বাকি (₹)": "मौजूदा बाकी (₹)", "বর্তমান বাকি আছে (আপনি পাবেন)": "अभी बाकी है (आपको मिलेगा)", "বর্তমান ব্যালেন্স:": "मौजूदा शेष:", "বর্তমান মোট বাকি": "मौजूदा कुल बाकी", "বর্তমান স্টক": "मौजूदा स्टॉक", "বর্তমান স্টক:": "मौजूदा स्टॉक:", "বস্ত্রালয় ও পোশাকের দোকান": "वस्त्रालय व कपड़ों की दुकान", "বা": "या", "বাকি": "बाकी", "বাকি (₹)": "बाकी (₹)", "বাকি অংশ": "बाकी हिस्सा", "বাকি আছে": "बाकी है", "বাকি খাতা": "बाकी खाता", "বাকি খাতায়": "बाकी खाते में", "বাকি খাতায় কিছু যাবে না": "बाकी खाते में कुछ नहीं जाएगा", "বাকি টাকা এখনও দেয়নি": "बाकी रकम अभी नहीं दी है", "বাকি থাকলে পরিশোধের তারিখ (ঐচ্ছিক)": "बाकी रहने पर भुगतान की तारीख (वैकल्पिक)", "বাকি দিচ্ছেন (আইটেমভিত্তিক বিল বা টাকা)": "बाकी दे रहे हैं (आइटम वाला बिल या रकम)", "বাকি দিলাম": "बाकी दिया", "বাকি দিলাম (বিল)": "बाकी दिया (बिल)", "বাকি দেওয়া": "बाकी दिया गया", "বাকি পরিশোধের তারিখ (ঐচ্ছিক)": "बाकी भुगतान की तारीख (वैकल्पिक)", "বাকি শূন্য (০.০০)": "बाकी शून्य (0.00)", "বাক্স": "डिब्बा", "বাটনে চেপে স্টক বাড়ান": "बटन दबाकर स्टॉक बढ़ाएँ", "বাটি": "कटोरी", "বাতিল": "रद्द करें", "বিক্রয়": "बिक्री", "বিক্রয়দর (₹)": "बिक्री दर (₹)", "বিক্রয়দর (₹/একক)": "बिक्री दर (₹/इकाई)", "বিক্রি (₹)": "बिक्री (₹)", "বিদ্যুৎ ও কারেন্ট বিল": "बिजली व करंट बिल", "বিদ্যুৎ বিল": "बिजली बिल", "বিপদজনক এলাকা": "ख़तरे का क्षेत्र", "বিবরণ": "विवरण", "বিবরণ / নোট (ঐচ্ছিক)": "विवरण / नोट (वैकल्पिक)", "বিবরণ/মন্তব্য": "विवरण/टिप्पणी", "বিবিধ": "विविध", "বিবিধ খরচ": "विविध खर्च", "বিল": "बिल", "বিল তৈরির সময় পণ্যের নাম মিললে স্টক নিজে থেকে কমে যাবে এবং দর বসে যাবে": "बिल बनाते समय सामान का नाम मिलने पर स्टॉक अपने आप घटेगा और दर भर जाएगी", "বিল সংরক্ষণ করুন ও মেমো দেখুন": "बिल सहेजें और मेमो देखें", "বিল হোয়াটসঅ্যাপে পাঠান": "बिल व्हाट्सऐप पर भेजें", "বিলে নগদ / বাকি জমা": "बिल पर नकद / बाकी जमा", "বিলের চেয়ে বেশি দিয়েছে": "बिल से ज़्यादा दिया", "বিলের তালিকা": "बिल की सूची", "বিলের মোট (Yet to pay)": "बिल का कुल (Yet to pay)", "বিলের মোট টাকা শূন্য হতে পারে না!": "बिल का कुल शून्य नहीं हो सकता!", "বোতল": "बोतल", "ব্যবহার করুন": "का उपयोग करें", "ব্যাকআপ ও রিস্টোর (সব দোকান সহ)": "बैकअप व रीस्टोर (सभी दुकानों सहित)", "ব্যাকআপ খুলুন": "बैकअप खोलें", "ব্যাকআপ ডাউনলোড করুন (JSON)": "बैकअप डाउनलोड करें (JSON)", "ব্যাকআপ থেকে রিস্টোর করুন": "बैकअप से रीस्टोर करें", "ব্যাকআপ নেওয়ার সময়কার পাসওয়ার্ড (অথবা পুনরুদ্ধার শব্দ) দিন": "बैकअप लेते समय का पासवर्ड (या रिकवरी शब्द) दें", "ব্যাকআপ ফাইল থেকে রিস্টোর করুন": "बैकअप फ़ाइल से रीस्टोर करें", "ব্যাকআপ ফাইল নিয়মিত ডাউনলোড করে রাখুন": "बैकअप फ़ाइल नियमित डाउनलोड करके रखें", "ব্যাকআপ ফাইল রিস্টোর করুন": "बैकअप फ़ाइल रीस्टोर करें", "ব্যাকআপ ফাইলও এনক্রিপ্টেড — খুলতে ব্যাকআপ নেওয়ার সময়কার পাসওয়ার্ড (বা পুনরুদ্ধার শব্দ) লাগবে": "बैकअप फ़ाइल भी एन्क्रिप्टेड है — खोलने के लिए बैकअप लेते समय का पासवर्ड (या रिकवरी शब्द) लगेगा", "ব্যাকআপ ফাইলটি নষ্ট বা অসম্পূর্ণ!": "बैकअप फ़ाइल खराब या अधूरी है!", "ব্যাকআপ ফাইলের গঠন সঠিক নয়! অনুগ্রহ করে সঠিক ব্যাকআপ ফাইল নির্বাচন করুন": "बैकअप फ़ाइल का ढाँचा सही नहीं है! कृपया सही बैकअप फ़ाइल चुनें", "ব্যাকআপ সফলভাবে রিস্টোর করা হয়েছে!": "बैकअप सफलतापूर्वक रीस्टोर हो गया!", "ব্যাকআপের পাসওয়ার্ড": "बैकअप का पासवर्ड", "ব্যান্ডেজ": "पट्टी (बैंडेज)", "ব্যালেন্স (₹)": "शेष (₹)", "ভরি": "भरी", "ভাংতি বা খুচরো কত টাকা নিয়ে ক্যাশবাক্স শুরু করছেন": "कैश बॉक्स कितने खुले पैसों से शुरू कर रहे हैं", "ভিটামিন ট্যাবলেট": "विटामिन की गोली", "ভুল পাসওয়ার্ড!": "गलत पासवर्ड!", "ভুল পাসওয়ার্ড! আবার চেষ্টা করুন": "गलत पासवर्ड! फिर से कोशिश करें", "ভুল পাসওয়ার্ড! ব্যাকআপ খোলা যায়নি": "गलत पासवर्ड! बैकअप खोला नहीं जा सका", "ভুল পুনরুদ্ধার শব্দ! আবার চেষ্টা করুন": "गलत रिकवरी शब्द! फिर से कोशिश करें", "মজুরি": "मज़दूरी", "মজুরি (₹)": "मज़दूरी (₹)", "মজুরি খরচ": "मज़दूरी का खर्च", "মন্তব্য / বিবরণ (ঐচ্ছিক)": "टिप्पणी / विवरण (वैकल्पिक)", "মন্তব্য/নোট": "टिप्पणी/नोट", "মসুর ডাল": "मसूर दाल", "মাত্র": "सिर्फ़", "মালপত্র পরিবহন": "माल परिवहन", "মালিকের সর্বমোট পাওনা বাকি": "मालिक का कुल बकाया बाकी", "মাস বেছে নিন": "महीना चुनें", "মাস বেছে নিন (যেমন 2026-11)": "महीना चुनें (जैसे 2026-11)", "মাসিক রিপোর্ট": "मासिक रिपोर्ट", "মাসিক রিপোর্ট (PDF)": "मासिक रिपोर्ट (PDF)", "মাসিক রিপোর্ট —": "मासिक रिपोर्ट —", "মাসের হিসাব রিপোর্ট (PDF)": "महीने के हिसाब की रिपोर्ट (PDF)", "মিটার": "मीटर", "মিনিকেট চাল": "मिनिकेट चावल", "মিলিগ্রাম": "मिलीग्राम", "মিষ্টান্ন ভাণ্ডার ও মিষ্টির দোকান": "मिठाई भंडार व मिठाई की दुकान", "মিষ্টি": "मिठाई", "মিষ্টি দই": "मीठा दही", "মিষ্টিমুখ করুন, ধন্যবাদ! আবার আসবেন": "मुँह मीठा कीजिए, धन्यवाद! फिर आइएगा", "মিষ্টির নাম": "मिठाई का नाम", "মিষ্টির মেমো": "मिठाई का मेमो", "মুছুন": "मिटाएँ", "মুছে ফেলা গ্রাহক": "मिटाया गया ग्राहक", "মুদিখানা ও ডিপার্টমেন্টাল": "किराना व डिपार्टमेंटल स्टोर", "মেমো": "मेमो", "মেমো নং": "मेमो नं.", "মেয়াদ ও ব্যাচ দেখে ওষুধ নিন": "दवा लेते समय एक्सपायरी और बैच देखें", "মেয়াদ পেরিয়েছে": "समय सीमा पार", "মেরামত ও অন্যান্য": "मरम्मत व अन्य", "মেরামত ও যত্ন": "मरम्मत व रखरखाव", "মোট": "कुल", "মোট (₹)": "कुल (₹)", "মোট আইটেম": "कुल आइटम", "মোট ওষুধ মূল্য:": "कुल दवा मूल्य:", "মোট খাবারের বিল:": "कुल खाने का बिल:", "মোট গয়নার মূল্য (মজুরিসহ):": "कुल गहनों का मूल्य (मज़दूरी सहित):", "মোট পণ্য মূল্য:": "कुल सामान मूल्य:", "মোট পোশাকের মূল্য:": "कुल कपड़ों का मूल्य:", "মোট বাকি (বর্তমান দোকানে)": "कुल बाकी (मौजूदा दुकान में)", "মোট বাকি:": "कुल बाकी:", "মোট বিক্রি (' + d.bills.length + 'টি বিল)": "कुल बिक्री (", "মোট বিল": "कुल बिल", "মোট বিল:": "कुल बिल:", "মোট মিষ্টির মূল্য:": "कुल मिठाई का मूल्य:", "মোট মূল্য:": "कुल मूल्य:", "মোবাইল": "मोबाइल", "মোবাইল (ঐচ্ছিক)": "मोबाइल (वैकल्पिक)", "মোবাইল নম্বর": "मोबाइल नंबर", "মোবাইল নম্বর (ঐচ্ছিক)": "मोबाइल नंबर (वैकल्पिक)", "মোবাইল নম্বর:": "मोबाइल नंबर:", "য় দেখা যাবে": "में दिखेगा", "যাচাই ব্যর্থ হয়েছে": "जाँच विफल रही", "যাচাইয়ের জন্য ব্যাকআপের পাসওয়ার্ড দিন": "जाँच के लिए बैकअप का पासवर्ड दें", "যাবে:": "जाएगा:", "যেমন:": "जैसे:", "যেমন: ক্যাশ পেমেন্ট বা মেমো নোট": "जैसे: कैश पेमेंट या मेमो नोट", "যেমন: দুটি শব্দ মিলিয়ে একটি বাক্যাংশ": "जैसे: दो शब्द मिलाकर एक वाक्यांश", "যেমন: প্রিয় বই বা স্থান": "जैसे: पसंदीदा किताब या जगह", "যেমন: বিকালের চা ও বিস্কুট": "जैसे: शाम की चाय और बिस्किट", "যেমন: মা তারা ভাণ্ডার": "जैसे: माँ तारा भंडार", "যেমন: মা তারা মিষ্টান্ন ভাণ্ডার": "जैसे: माँ तारा मिठाई भंडार", "যেমন: মিনিকেট চাল": "जैसे: मिनिकेट चावल", "যেমন: মেমো নোট": "जैसे: मेमो नोट", "যেমন: রহিম (খালি রাখলে 'নগদ গ্রাহক')": "जैसे: रहीम (खाली रखने पर 'नकद ग्राहक')", "যেমন: রহিম শেখ": "जैसे: रहीम शेख", "যেমন: সোনারপুর বাজার, কলকাতা": "जैसे: सोनारपुर बाज़ार, कोलकाता", "রসগোল্লা": "रसगुल्ला", "রসমালাই": "रसमलाई", "রিপোর্ট": "रिपोर्ट", "রিপোর্ট ও সেটিংস": "रिपोर्ट व सेटिंग्स", "রিপোর্ট তারিখ:": "रिपोर्ट की तारीख:", "রিপোর্ট দেখুন ও": "रिपोर्ट देखें और", "রিপোর্ট:": "रिपोर्ट:", "রিপোর্টের বিষয়:": "रिपोर्ट का विषय:", "রিসেট হচ্ছে": "रीसेट हो रहा है", "রিস্টোর করতে সমস্যা হয়েছে:": "रीस्टोर करते समय समस्या हुई:", "রূপার কয়েন": "चाँदी का सिक्का", "রূপার নুপুর": "चाँदी की पायल", "রূপো": "चाँदी", "রেডিমেড কুর্তি": "रेडीमेड कुर्ती", "লগআউট": "लॉगआउट", "লগইন করুন": "लॉगिन करें", "লবণ": "नमक", "লিংক দিয়ে অথবা ফাইলটি সরাসরি (file://) খুলুন": "लिंक से या फ़ाइल को सीधे (file://) खोलें", "লিটার": "लीटर", "লুঙ্গি": "लुंगी", "লেনদেনের ইতিহাস": "लेन-देन का इतिहास", "লেনদেনের ধরন": "लेन-देन का प्रकार", "লেনদেনের বিবরণ": "लेन-देन का विवरण", "লোড হচ্ছে": "लोड हो रहा है", "শার্ট পিস": "शर्ट पीस", "শুধু বিলের রেকর্ডে থাকবে": "सिर्फ़ बिल के रिकॉर्ड में रहेगा", "শুরু": "शुरू", "শুরুর তারিখ শেষের তারিখের পরে হতে পারে না!": "शुरुआती तारीख अंतिम तारीख के बाद नहीं हो सकती!", "শেয়ার / হোয়াটসঅ্যাপে পাঠান": "शेयर / व्हाट्सऐप पर भेजें", "সংরক্ষণ করুন": "सहेजें", "সংরক্ষিত ডেটা নষ্ট হয়ে গেছে বা পড়া যাচ্ছে না": "सहेजा गया डेटा खराब हो गया है या पढ़ा नहीं जा रहा", "সংরক্ষিত ডেটা পড়া যাচ্ছে না": "सहेजा गया डेटा पढ़ा नहीं जा रहा", "সকল গ্রাহকের বাকি তালিকা": "सभी ग्राहकों के बाकी की सूची", "সকল লেনদেনের তালিকা": "सभी लेन-देन की सूची", "সকল লেনদেনের রিপোর্ট (CSV)": "सभी लेन-देन की रिपोर्ट (CSV)", "সকালে দোকান খোলার সময় ওপেনিং ক্যাশ দিয়ে দিন শুরু করুন, সারাদিনের নিখুঁত হিসাব থাকবে": "सुबह दुकान खोलते समय ओपनिंग कैश देकर दिन शुरू करें, पूरे दिन का सटीक हिसाब रहेगा", "সকালের ক্যাশ (Opening):": "सुबह का कैश (Opening):", "সকালের ক্যাশ:": "सुबह का कैश:", "সকালের ক্যাশবাক্সের টাকা / ওপেনিং ব্যালেন্স (₹)": "सुबह के कैश बॉक्स का पैसा / ओपनिंग बैलेंस (₹)", "সক্রিয়": "सक्रिय", "সঠিক টাকার পরিমাণ দিন": "सही रकम दें", "সঠিক টাকার পরিমাণ দিন (শূন্য বা ঋণাত্মক গ্রহণযোগ্য নয়)": "सही रकम दें (शून्य या ऋणात्मक स्वीकार्य नहीं)", "সঠিক টাকার পরিমাণ দিন!": "सही रकम दें!", "সঠিক মাস বেছে নিন!": "सही महीना चुनें!", "সঠিক সংখ্যা দিন!": "सही संख्या दें!", "সঠিক স্টকের পরিমাণ দিন!": "स्टॉक की सही मात्रा दें!", "সতর্কতা": "चेतावनी", "সতর্কতা সীমা": "चेतावनी सीमा", "সন্দেশ": "संदेश", "সব গ্রাহকের বাকি তালিকা (CSV)": "सभी ग्राहकों के बाकी की सूची (CSV)", "সব তথ্য এক্সেল বা স্প্রেডশীটে দেখার জন্য": "सारा डेटा एक्सेल या स्प्रेडशीट में देखने के लिए", "সব পরিশোধিত": "सब चुकता", "সব পরিশোধিত (০.০০)": "सब चुकता (0.00)", "সব লেনদেন": "सभी लेन-देन", "সব লেনদেনের জন্য তারিখ ফাঁকা রাখুন, অথবা সময়কাল বেছে নিন": "सभी लेन-देन के लिए तारीख खाली रखें, या अवधि चुनें", "সময়কাল": "अवधि", "সমস্ত দোকান মিলিয়ে মোট হিসাব": "सभी दुकानों को मिलाकर कुल हिसाब", "সমস্ত হিসাব সুরক্ষিত থাকবে": "सारा हिसाब सुरक्षित रहेगा", "সমস্যা হয়েছে:": "समस्या हुई:", "সরাসরি এককালীন টাকা": "सीधी एकमुश्त रकम", "সর্বাধিক বিক্রিত আইটেম": "सबसे ज़्यादा बिकने वाले आइटम", "সর্ষের তেল": "सरसों का तेल", "সহজে ভেঙে ফেলা যায় — লম্বা পাসওয়ার্ড বা কয়েকটি শব্দ মিলিয়ে বানান": "आसानी से तोड़ा जा सकता है — लंबा पासवर्ड या कई शब्द मिलाकर बनाएँ", "সাধারণ দোকান": "आम दुकान", "সাধারণ দোকান ও অন্যান্য": "आम दुकान व अन्य", "সাধারণ পণ্য ১": "आम सामान 1", "সাধারণ পণ্য ২": "आम सामान 2", "সাবান": "साबुन", "সাম্প্রতিক বিল": "हाल के बिल", "সিঙাড়া": "सिंघाड़ा (समोसा)", "সুতির শাড়ি": "सूती साड़ी", "সুবিধামতো মিটিয়ে দেবেন": "सुविधा से चुका दीजिएगा", "সুস্থ থাকুন!": "स्वस्थ रहिए!", "সেট": "सेट", "সেটিংস": "सेटिंग्स", "সোনা": "सोना", "সোনার আংটি (২২K)": "सोने की अंगूठी (22K)", "সোনার চেন (২২K)": "सोने की चेन (22K)", "স্টক": "स्टॉक", "স্টক ঋণাত্মক": "स्टॉक ऋणात्मक", "স্টক তালিকা (CSV)": "स्टॉक सूची (CSV)", "স্টক শেষ": "स्टॉक ख़त्म", "স্টক সতর্কতা:": "स्टॉक चेतावनी:", "স্টকের মূল্য (ক্রয়দরে)": "स्टॉक का मूल्य (खरीद दर पर)", "স্টেটমেন্ট": "स्टेटमेंट", "স্টেটমেন্ট তৈরি করুন": "स्टेटमेंट बनाएँ", "স্টেটমেন্ট —": "स्टेटमेंट —", "স্টেটমেন্টের তারিখ": "स्टेटमेंट की तारीख", "স্পেশাল চা": "स्पेशल चाय", "স্বর্ণ ও রৌপ্য অলঙ্কার (জুয়েলারি)": "सोना व चाँदी के गहने (ज्वैलर)", "স্যাভলন / ডেটল": "सैवलॉन / डेटॉल", "হলুদ গুঁড়ো": "हल्दी पाउडर", "হাঁড়ি": "हाँडी", "হিসাব মিলিয়ে দিন বন্ধ করুন": "हिसाब मिलाकर दिन बंद करें", "হোম পেজ থেকে দিন শেষে": "दिन के अंत में होम पेज से", "হোম পেজে ফিরে যান": "होम पेज पर वापस जाएँ", "হোয়াটসঅ্যাপ চ্যাটে": "व्हाट्सऐप चैट में", "হোয়াটসঅ্যাপে তাগাদা পাঠান": "व्हाट्सऐप पर तकादा भेजें", "হোয়াটসঅ্যাপে তাগাদা পাঠানোর জন্য গ্রাহকের সঠিক মোবাইল নম্বর যোগ করুন": "व्हाट्सऐप पर तकादा भेजने के लिए ग्राहक का सही मोबाइल नंबर जोड़ें", "হোয়াটসঅ্যাপে পাকা বিল ও তাগাদা পাঠানোর জন্য মোবাইল নম্বর দিন": "व्हाट्सऐप पर पक्का बिल और तकादा भेजने के लिए मोबाइल नंबर दें", "১৫ দিন": "15 दिन", "৩০ দিন": "30 दिन", "৭ দিন": "7 दिन", "জন": "लोग", "টি": "", "আপনার মোট বাকি": "आपका कुल बाकी है", "হিসাবের স্টেটমেন্ট (PDF) পাঠানো হল": "हिसाब का स्टेटमेंट (PDF) भेजा गया", "অংশে দেখা যাবে": "अनुभाग में दिखेगा", "অবশিষ্ট": "बचा है", "মোট বিক্রি": "कुल बिक्री", "৪ সংখ্যার": "4 अंकों का", "মোট ওষুধ মূল্য": "कुल दवा मूल्य", "মোট খাবারের বিল": "कुल खाने का बिल", "মোট গয়নার মূল্য (মজুরিসহ)": "कुल गहनों का मूल्य (मज़दूरी सहित)", "মোট পণ্য মূল্য": "कुल सामान मूल्य", "মোট পোশাকের মূল্য": "कुल कपड़ों का मूल्य", "মোট মিষ্টির মূল্য": "कुल मिठाई का मूल्य", "মোট মূল্য": "कुल मूल्य"}};
+    const BN_RE = /[ঀ-৿]/;
+    var currentLang = 'bn';
+    var _trRx = null, _trPack = null;
+
+    function LOC() { return (LANGS[currentLang] || LANGS.bn).locale; }
+
+    function _escRx(s) { return s.replace(/[.*+?^${}()|[\]\\\/-]/g, '\\$&'); }
+
+    function buildTranslator() {
+      _trRx = null; _trPack = null;
+      if (currentLang === 'bn' || !I18N_PACKS[currentLang]) return;
+      const pack = {};
+      const src = I18N_PACKS[currentLang];
+      for (const k in src) pack[k.normalize('NFC')] = src[k];
+      const keys = Object.keys(pack).sort((a, b) => b.length - a.length);
+      _trPack = pack;
+      _trRx = new RegExp('(^|[^\\u0980-\\u09FF])(' + keys.map(_escRx).join('|') + ')(?![\\u0980-\\u09FF])', 'g');
+    }
+
+    function trText(s) {
+      if (s === null || s === undefined) return s;
+      if (currentLang === 'bn') return s;
+      s = String(s);
+      if (!BN_RE.test(s)) return s;
+      s = s.normalize('NFC');
+      if (_trRx) {
+        _trRx.lastIndex = 0;
+        s = s.replace(_trRx, function (m, pre, k) {
+          const v = _trPack[k];
+          return pre + (v === undefined ? k : v);
+        });
+      }
+      s = s.replace(/[০-৯]/g, function (d) { return '০১২৩৪৫৬৭৮৯'.indexOf(d); });
+      if (currentLang === 'en') s = s.replace(/।/g, '.');
+      return s;
+    }
+
+    function _trTextNode(n) {
+      if (n.__o === undefined) n.__o = BN_RE.test(n.nodeValue) ? n.nodeValue : null;
+      if (n.__o === null) return;
+      const t = trText(n.__o);
+      if (n.nodeValue !== t) n.nodeValue = t;
+    }
+
+    const _TR_ATTRS = ['placeholder', 'title', 'aria-label'];
+    function _trAttrs(el) {
+      for (const a of _TR_ATTRS) {
+        if (!el.hasAttribute(a)) continue;
+        if (!el.__a) el.__a = {};
+        if (!(a in el.__a)) { const v = el.getAttribute(a); el.__a[a] = BN_RE.test(v) ? v : null; }
+        const o = el.__a[a];
+        if (o === null) continue;
+        const t = trText(o);
+        if (el.getAttribute(a) !== t) el.setAttribute(a, t);
+      }
+    }
+
+    // Translate (or restore) everything under root, always starting from the original Bengali text.
+    function trTree(root) {
+      if (!root) return;
+      if (root.nodeType === 3) { if (!(root.parentElement && root.parentElement.closest('[data-no-tr]'))) _trTextNode(root); return; }
+      if (root.nodeType !== 1) return;
+      if (root.closest && root.closest('[data-no-tr]')) return;
+      _trAttrs(root);
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
+        acceptNode: function (n) {
+          if (n.nodeType === 1) {
+            const t = n.tagName;
+            if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEXTAREA' || n.hasAttribute('data-no-tr')) return NodeFilter.FILTER_REJECT;
+            _trAttrs(n);
+            return NodeFilter.FILTER_SKIP;
+          }
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      });
+      let node;
+      while ((node = walker.nextNode())) _trTextNode(node);
+    }
+
+    function fmtDateLoc(at) {
+      return new Date(at).toLocaleDateString(LOC(), { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+    function fmtTimeLoc(at) {
+      return new Date(at).toLocaleTimeString(LOC(), { hour: '2-digit', minute: '2-digit' });
+    }
+
+    function fillLangSelect() {
+      const sel = document.getElementById('lang-select');
+      if (!sel) return;
+      sel.innerHTML = Object.keys(LANGS).map(function (c) {
+        return '<option value="' + c + '"' + (c === currentLang ? ' selected' : '') + '>🌐 ' + LANGS[c].name + '</option>';
+      }).join('');
+    }
+
+    function applyLangChrome() {
+      document.documentElement.lang = currentLang;
+      document.title = (LANGS[currentLang] || LANGS.bn).title;
+      fillLangSelect();
+    }
+
+    function initLang() {
+      let saved = null;
+      try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
+      currentLang = (saved && LANGS[saved]) ? saved : 'bn';
+      buildTranslator();
+      applyLangChrome();
+      trTree(document.body);
+      // Anything the app renders later is translated as soon as it is inserted.
+      new MutationObserver(function (muts) {
+        for (const m of muts) m.addedNodes.forEach(trTree);
+      }).observe(document.body, { childList: true, subtree: true });
+      // Dialogs
+      const _alert = window.alert.bind(window), _confirm = window.confirm.bind(window), _prompt = window.prompt.bind(window);
+      window.alert = function (m) { return _alert(trText(m)); };
+      window.confirm = function (m) { return _confirm(trText(m)); };
+      window.prompt = function (m, d) { return _prompt(trText(m), d); };
+    }
+
+    function setLang(code) {
+      if (!LANGS[code]) return;
+      currentLang = code;
+      try { localStorage.setItem(LANG_KEY, code); } catch (e) {}
+      buildTranslator();
+      applyLangChrome();
+      closeModal();
+      trTree(document.body);
+      renderApp();
+    }
+
+    function showLangChooser() {
+      openModal(`
+        <div class="modal-box" data-no-tr>
+          <div class="modal-box-header">
+            <div class="modal-box-title">🌐 Choose your language · ভাষা বেছে নিন · भाषा चुनें</div>
+          </div>
+          <div class="modal-box-body">
+            ${Object.keys(LANGS).map(c => `
+              <button type="button" class="lang-chooser-btn" onclick="setLang('${c}')">
+                <span>${LANGS[c].name}</span><small>${LANGS[c].en}</small>
+              </button>`).join('')}
+            <div class="help-text">You can change the language anytime from the 🌐 menu at the top.</div>
+          </div>
+        </div>`);
+    }
 
     // Category Metadata
     const CATEGORIES = {
@@ -1839,6 +2022,7 @@
     const _td = (typeof TextDecoder !== 'undefined') ? new TextDecoder() : null;
 
     function bnDigits(n) {
+      if (currentLang !== 'bn') return String(n);
       return String(n).replace(/\d/g, d => '০১২৩৪৫৬৭৮৯'[d]);
     }
 
@@ -2301,7 +2485,7 @@
       try {
         const d = new Date(dateStr);
         if (isNaN(d.getTime())) return dateStr;
-        return d.toLocaleString('bn-IN', {
+        return d.toLocaleString(LOC(), {
           year: 'numeric',
           month: 'short',
           day: 'numeric',
@@ -2360,7 +2544,7 @@
     }
 
     function escapeCsvCell(val) {
-      let s = (val === null || val === undefined) ? '' : String(val);
+      let s = (val === null || val === undefined) ? '' : trText(String(val));
       if (/^[=+\-@]/.test(s)) {
         s = "'" + s;
       }
@@ -3391,7 +3575,7 @@
           <div class="shift-header">
             <div class="shift-status-badge ${shift ? 'open' : 'closed'}">
               <span>${shift ? '🟢' : '⚪'}</span>
-              <span>${shift ? 'দোকান খোলা (' + formatDateBn(shift.openedAt).split(',')[1] + ' থেকে)' : 'আজ দোকান এখনও খোলা হয়নি'}</span>
+              <span>${shift ? 'দোকান খোলা (' + fmtTimeLoc(shift.openedAt) + ' থেকে)' : 'আজ দোকান এখনও খোলা হয়নি'}</span>
             </div>
             ${shift ? `
               <button type="button" id="btn-close-shift" class="btn btn-sm btn-outline-danger" style="width: auto;">
@@ -3970,7 +4154,7 @@
           ['দোকানের নাম:', shop.name],
           ['গ্রাহকের নাম:', customer.name],
           ['মোবাইল নম্বর:', customer.phone || '–'],
-          ['রিপোর্ট তারিখ:', new Date().toLocaleDateString('bn-IN')],
+          ['রিপোর্ট তারিখ:', new Date().toLocaleDateString(LOC())],
           ['বর্তমান ব্যালেন্স:', (balance / 100).toFixed(2)],
           [],
           ['তারিখ ও সময়', 'লেনদেনের ধরন', 'পরিমাণ (₹)', 'মন্তব্য/নোট']
@@ -4125,7 +4309,7 @@
                 <button type="button" class="sug-pill" data-dueadd="30">৩০ দিন</button>
                 <button type="button" class="sug-pill" data-dueadd="0">তারিখ মুছুন</button>
               </div>
-              <div class="help-text">তারিখ পেরোলে হোমে "তাগাদার তালিকা"-য় দেখা যাবে।</div>
+              <div class="help-text">তারিখ পেরোলে হোমে "তাগাদার তালিকা" অংশে দেখা যাবে।</div>
             </div>` : ''}
 
             <div class="form-group">
@@ -4246,10 +4430,10 @@
 
       window.handlePillClick = function(itemName) {
         if (!isItemizedMode) {
-          document.getElementById('entry-note').value = itemName;
+          document.getElementById('entry-note').value = trText(itemName);
           return;
         }
-        addItemRow(itemName);
+        addItemRow(trText(itemName));
       };
 
       document.getElementById('btn-add-item-row').onclick = () => addItemRow();
@@ -4814,7 +4998,7 @@
 
       document.getElementById('nb-add-row').onclick = () => addRow();
       main.querySelectorAll('[data-sug]').forEach(btn => {
-        btn.onclick = () => addRow(btn.getAttribute('data-sug'));
+        btn.onclick = () => addRow(trText(btn.getAttribute('data-sug')));
       });
       paidEl.addEventListener('input', refresh);
       main.querySelectorAll('[data-nbdue]').forEach(b => {
@@ -5123,9 +5307,9 @@
               ${shifts.map(s => `
                 <div class="card" style="padding: 12px; margin-bottom: 8px; border-left: 4px solid var(--primary);">
                   <div style="font-weight: 700; font-size: 14px; margin-bottom: 4px;">
-                    📅 ${formatDateBn(s.closedAt).split(',')[0]}
+                    📅 ${fmtDateLoc(s.closedAt)}
                   </div>
-                  <div class="help-text mb-2">⏱️ ${formatDateBn(s.openedAt).split(',')[1]} - ${formatDateBn(s.closedAt).split(',')[1]}</div>
+                  <div class="help-text mb-2">⏱️ ${fmtTimeLoc(s.openedAt)} - ${fmtTimeLoc(s.closedAt)}</div>
                   <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; font-size: 13px;">
                     <div>সকালের ক্যাশ: <strong>${formatMoney(s.openingCash)}</strong></div>
                     <div>নগদ জমা: <strong style="color: var(--primary);">+${formatMoney(s.cashIn)}</strong></div>
@@ -5313,7 +5497,7 @@
         const rows = [
           ['দোকানের নাম:', shop.name],
           ['রিপোর্টের বিষয়:', 'সকল গ্রাহকের বাকি তালিকা'],
-          ['তারিখ:', new Date().toLocaleDateString('bn-IN')],
+          ['তারিখ:', new Date().toLocaleDateString(LOC())],
           [],
           ['ক্রমিক', 'গ্রাহকের নাম', 'মোবাইল নম্বর', 'বর্তমান বাকি (₹)', 'অবস্থা']
         ];
@@ -5341,7 +5525,7 @@
         const rows = [
           ['দোকানের নাম:', shop.name],
           ['রিপোর্টের বিষয়:', 'সকল লেনদেনের তালিকা'],
-          ['তারিখ:', new Date().toLocaleDateString('bn-IN')],
+          ['তারিখ:', new Date().toLocaleDateString(LOC())],
           [],
           ['তারিখ ও সময়', 'গ্রাহকের নাম', 'মোবাইল নম্বর', 'লেনদেনের ধরন', 'পরিমাণ (₹)', 'বিবরণ/মন্তব্য']
         ];
@@ -5450,10 +5634,10 @@
     function formatDueBn(s) {
       if (!s) return '';
       const p = s.split('-').map(Number);
-      return new Date(p[0], p[1] - 1, p[2]).toLocaleDateString('bn-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+      return new Date(p[0], p[1] - 1, p[2]).toLocaleDateString(LOC(), { day: 'numeric', month: 'short', year: 'numeric' });
     }
     function formatShortDateBn(at) {
-      return new Date(at).toLocaleDateString('bn-IN', { day: 'numeric', month: 'short', year: '2-digit' });
+      return new Date(at).toLocaleDateString(LOC(), { day: 'numeric', month: 'short', year: '2-digit' });
     }
     function fmtSigned(p) {
       return (p < 0 ? '−' : '') + formatMoney(p);
@@ -5492,13 +5676,13 @@
     }
 
     function buildReminderMsg(shop, customer, balance, info) {
-      let msg = `নমস্কার ${customer.name}, ${shop.name}-এ আপনার মোট বাকি ₹${(balance / 100).toFixed(2)}।`;
+      let msg = `নমস্কার ${customer.name}, ${shop.name} — আপনার মোট বাকি ₹${(balance / 100).toFixed(2)}।`;
       if (info && info.overdue > 0) {
         msg += ` এর মধ্যে ₹${(info.overdue / 100).toFixed(2)} পরিশোধের তারিখ (${formatDueBn(info.oldestDue)}) পেরিয়ে গেছে (${info.daysOverdue} দিন আগে)।`;
       } else if (info && info.nextDue) {
         msg += ` পরিশোধের তারিখ: ${formatDueBn(info.nextDue)}।`;
       }
-      return msg + ' সুবিধামতো মিটিয়ে দেবেন। ধন্যবাদ।';
+      return trText(msg + ' সুবিধামতো মিটিয়ে দেবেন। ধন্যবাদ।');
     }
 
     function homeAlertsHtml(shop) {
@@ -5642,7 +5826,7 @@
         s.qty = Math.round((s.qty - it.qty) * 1000) / 1000;
         s.updatedAt = new Date().toISOString();
         if (s.qty < 0) warns.push(`${s.name}: স্টক ঋণাত্মক (${stockQtyFmt(s.qty)} ${s.unit}) — গুদাম হিসাব মিলিয়ে নিন`);
-        else if (s.qty <= 0 || (s.min > 0 && s.qty <= s.min)) warns.push(`${s.name}: মাত্র ${stockQtyFmt(s.qty)} ${s.unit} বাকি`);
+        else if (s.qty <= 0 || (s.min > 0 && s.qty <= s.min)) warns.push(`${s.name}: মাত্র ${stockQtyFmt(s.qty)} ${s.unit} অবশিষ্ট`);
       }
       return warns;
     }
@@ -5733,7 +5917,7 @@
         const rows = [
           ['দোকানের নাম:', shop.name],
           ['রিপোর্ট:', 'গুদামের স্টক তালিকা'],
-          ['তারিখ:', new Date().toLocaleDateString('bn-IN')],
+          ['তারিখ:', new Date().toLocaleDateString(LOC())],
           [],
           ['পণ্য', 'স্টক', 'একক', 'ক্রয়দর (₹)', 'বিক্রয়দর (₹)', 'সতর্কতা সীমা']
         ];
@@ -5918,6 +6102,7 @@
       try {
         for (const html of pagesHtml) {
           host.innerHTML = html;
+          trTree(host);
           jpgs.push(await renderElementToJpeg(host.firstElementChild, 2));
         }
       } finally {
@@ -5970,13 +6155,13 @@
         try {
           const file = await makeFile();
           if (navigator.canShare && navigator.canShare({ files: [file] })) {
-            await navigator.share({ files: [file], text: opts.waText || '' });
+            await navigator.share({ files: [file], text: trText(opts.waText || '') });
             return;
           }
           downloadBlob(file, opts.filename);
           statusEl.textContent = 'PDF ডাউনলোড হয়েছে। হোয়াটসঅ্যাপ চ্যাটে 📎 দিয়ে ওই PDF ফাইলটি অ্যাটাচ করে পাঠান।';
           const np = normalizePhone(opts.phone);
-          if (np) window.open(`https://wa.me/${np}?text=${encodeURIComponent(opts.waText || '')}`, '_blank', 'noopener');
+          if (np) window.open(`https://wa.me/${np}?text=${encodeURIComponent(trText(opts.waText || ''))}`, '_blank', 'noopener');
         } catch (err) {
           if (err && err.name === 'AbortError') return;
           statusEl.textContent = 'PDF পাঠানো যায়নি। "PDF ডাউনলোড" ব্যবহার করুন।';
@@ -5999,7 +6184,7 @@
           <div class="rpt-sub" style="margin-top:6px;">${sub}</div>
         </div>` : `
         <div class="rpt-head-sm"><strong>${escapeHtml(shop.name)}</strong> — ${title} <span>${sub}</span></div>`;
-      return `<div class="rpt-page">${head}<div class="rpt-body">${inner}</div><div class="rpt-foot"><span>${escapeHtml(shop.name)} • তৈরি: ${new Date().toLocaleDateString('bn-IN')}</span><span>পৃষ্ঠা ${pageNo}/${total}</span></div></div>`;
+      return `<div class="rpt-page">${head}<div class="rpt-body">${inner}</div><div class="rpt-foot"><span>${escapeHtml(shop.name)} • তৈরি: ${new Date().toLocaleDateString(LOC())}</span><span>পৃষ্ঠা ${pageNo}/${total}</span></div></div>`;
     }
 
     // stream items: {type:'sec', title, head[], aligns[], widths[]} | {type:'row', cells[]}
@@ -6061,7 +6246,7 @@
 
     function monthLabelBn(ym) {
       const p = ym.split('-').map(Number);
-      return new Date(p[0], p[1] - 1, 1).toLocaleDateString('bn-IN', { month: 'long', year: 'numeric' });
+      return new Date(p[0], p[1] - 1, 1).toLocaleDateString(LOC(), { month: 'long', year: 'numeric' });
     }
 
     // Each bill once: normal bills live in shop.bills, old itemized bills sit on entries
@@ -6246,7 +6431,7 @@
         pages: res.pages,
         filename: `statement_${safe}_${localDateStr()}.pdf`,
         phone: c.phone,
-        waText: `নমস্কার ${c.name}, ${shop.name}-এর হিসাবের স্টেটমেন্ট (PDF) পাঠানো হল।${res.closing > 0 ? ` বর্তমান বাকি ₹${(res.closing / 100).toFixed(2)}।` : ''} ধন্যবাদ।`
+        waText: `নমস্কার ${c.name}, ${shop.name} — হিসাবের স্টেটমেন্ট (PDF) পাঠানো হল।${res.closing > 0 ? ` বর্তমান বাকি ₹${(res.closing / 100).toFixed(2)}।` : ''} ধন্যবাদ।`
       });
     }
 
@@ -6426,7 +6611,13 @@
 
     // Hash change and load handlers
     window.addEventListener('hashchange', renderApp);
-    window.addEventListener('DOMContentLoaded', renderApp);
+    window.addEventListener('DOMContentLoaded', function () {
+      initLang();
+      renderApp();
+      var chosen = null;
+      try { chosen = localStorage.getItem(LANG_KEY); } catch (e) {}
+      if (!chosen) showLangChooser();
+    });
   </script>
 </body>
 </html>
